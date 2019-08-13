@@ -4,7 +4,7 @@ define(function(require) {
 	var Adapt = require('coreJS/adapt');
 	var Backbone = require('backbone');
 	var ThemeBlock = require('theme/adapt-theme-odi-generic/js/theme-block');
-	var msjquery = require('theme/adapt-theme-generic/js/jquery.dd.js');
+	var msjquery = require('theme/adapt-theme-odi-generic/js/jquery.dd.js');
 	var emailPresent = false;
 
 	// Block View
