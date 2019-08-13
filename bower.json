@@ -1,0 +1,24 @@
+{
+    "name": "adapt-theme-odi-generic",
+    "repository": "git@github.com:theodi/adapt-theme-odi-generic.git",
+    "framework": "^2.0.0",
+    "version": "0.6.0",
+    "homepage": "https://github.com/theodi/adapt-theme-odi-generic/",
+    "issues": "https://github.com/theodi/adapt-theme-odi-generic/issues",
+    "displayName": "ODI Generic",
+    "theme": "ODI-Generic",
+    "description": "Generic ODI eLearning template that is customisable",
+    "main": "js/theme.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-theme"
+    ],
+    "licenfco": "GPLv3",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

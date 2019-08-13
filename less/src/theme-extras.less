@@ -1,0 +1,1242 @@
+// Additional theme classes or attributes to be applied in JSON for more custom style 
+// ====================================================================
+
+// Divider block - used to separate content or break up pages. 
+// =============
+
+// Class applies alternative background color and component styling
+
+body {
+	background: #f3f2f2 url('assets/cubes.png');
+	background-position: 5px 5px;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+	font-weight: 300;
+	color: #6d6d6d;
+	font-size: 17px;
+	line-height: 27px;
+}
+.icon-home {
+	padding-right: 0;
+	float: left;
+	display: none;
+}
+.navigation-back-button {
+	display: none;
+}
+.about-credit p {
+	display: inline;
+}
+.menu {
+	.menu-item {
+		@media all and (max-width: @device-width-medium) {
+			width: 50%;
+		}
+		@media all and (max-width: @device-width-small) {
+			width: 100%;
+		}
+	}
+}
+.graphic-attribution {
+    position: relative;
+    background-color: rgba(100,100,100,0.85);
+    display: inline-block;
+    bottom: 2.5em;
+    padding: 3px;
+    color: white;
+}
+a {
+	color: inherit;
+}
+.graphic-attribution a {
+    color: white;
+}
+h5 {
+	font-size: 21.25px;
+	line-height: 31.25px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+.footer {
+	background-color: @navigation-color;
+	.graphic-attribution {
+		display: none;
+	}
+	.graphic-inner img {
+		max-width: 75%;
+	}
+}
+.socialbuttons-component {
+	position: relative;
+    text-align: right;
+}
+.about-section {
+	font-size: 0.8em;
+	a {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	p {
+		margin: 0px;
+	}
+	@media all and (max-width: @device-width-medium) {
+		text-align: center;
+	}
+}
+.about-credit {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.footer-logo {
+	text-align: left;
+	@media all and (max-width: @device-width-medium) {
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	@media all and (max-width: @device-width-small) {
+		padding-bottom: 0px;
+	}
+}
+.footer-logo img {
+	max-height: 70px;
+	display: inline-block;
+}
+.block {
+        &.hidden {
+		display: none;
+	}
+	.text-component {
+		&.ticks ul li {
+    	    list-style-type: none;
+	        margin-left: 28px;
+        	white-space: pre-wrap;
+        	&:before {
+            	content: "✔";
+            	margin: 0 14px 0 -28px;
+    		}
+		}
+	}
+	.narrative-component {
+		.narrative-content-item a {
+			color: white;
+		}
+		.narrative-slider-graphic img {
+			background-color: white;
+		}
+		&.white {
+			.narrative-slider-graphic img {
+				background-color: white;
+			}
+		}
+		&.color-one {
+			.narrative-slider-graphic img {
+				background-color: @color-one;
+			}
+		}
+		&.color-two {
+			.narrative-slider-graphic img {
+				background-color: @color-two;
+			}
+		}
+		&.color-three {
+			.narrative-slider-graphic img {
+				background-color: @color-three;
+			}
+		}
+		&.color-four {
+			.narrative-slider-graphic img {
+				background-color: @color-four;
+			}
+		}
+		&.color-five {
+			.narrative-slider-graphic img {
+				background-color: @color-five;
+			}
+		}
+		&.color-six {
+			.narrative-slider-graphic img {
+				background-color: @color-six;
+			}
+		}
+		&.color-seven {
+			.narrative-slider-graphic img {
+				background-color: @color-seven;
+			}
+		}
+		&.color-eight {
+			.narrative-slider-graphic img {
+				background-color: @color-eight;
+			}
+		}
+		&.color-nine {
+			.narrative-slider-graphic img {
+				background-color: @color-nine;
+			}
+		}
+		&.color-ten {
+			.narrative-slider-graphic img {
+				background-color: @color-ten;
+			}
+		}
+	}
+	.graphic-component {
+		&.intro-logo {
+			.graphic-widget {
+				text-align: center;
+			}
+			.graphic-inner img {
+				content: url("assets/intro-logo.png");
+				max-height: 200px;
+			}
+			.graphic-attribution {
+				display: none;
+			}
+		}
+		&.clipboard {
+			.graphic-widget {
+				text-align: center;
+			}
+			.graphic-inner img {
+				max-height: 290px;
+			}
+		}
+		&.white {
+			.graphic-inner img {
+				background-color: white;
+			}
+		}
+		&.color-one {
+			.graphic-inner img {
+				background-color: @color-one;
+			}
+		}
+		&.color-two {
+			.graphic-inner img {
+				background-color: @color-two;
+			}
+		}
+		&.color-three {
+			.graphic-inner img {
+				background-color: @color-three;
+			}
+		}
+		&.color-four {
+			.graphic-inner img {
+				background-color: @color-four;
+			}
+		}
+		&.color-five {
+			.graphic-inner img {
+				background-color: @color-five;
+			}
+		}
+		&.color-six {
+			.graphic-inner img {
+				background-color: @color-six;
+			}
+		}
+		&.color-seven {
+			.graphic-inner img {
+				background-color: @color-seven;
+			}
+		}
+		&.color-eight {
+			.graphic-inner img {
+				background-color: @color-eight;
+			}
+		}
+		&.color-nine {
+			.graphic-inner img {
+				background-color: @color-nine;
+			}
+		}
+		&.color-ten {
+			.graphic-inner img {
+				background-color: @color-ten;
+			}
+		}
+	}
+	&.color-one {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-one;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-one;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-one, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-one, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-one, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-one;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-one;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-one;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-one;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-one, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-one, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-one, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-one;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-one;
+		}
+	}
+	&.color-two {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-two;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-two;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-two, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-two, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-two, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-two;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-two;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-two;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-two;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-two, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-two, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-two, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-two;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-two;
+		}
+	}
+	&.color-three {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-three;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-three;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-three, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-three, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-three, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-three;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-three;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-three;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-three;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-three, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-three, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-three, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-three;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-three;
+		}
+	}
+	&.color-four {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-four;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-four;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-four, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-four, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-four, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-four;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-four;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-four;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-four;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-four, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-four, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-four, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-four;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-four;
+		}
+		.button, button {
+			background-color: @color-four;
+			color: white;
+			a {
+				color: white;
+			}
+		}
+	
+	}
+	&.color-five {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-five;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-five;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-five, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-five, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-five, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-five;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-five;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-five;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-five;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-five, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-five, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-five, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-five;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-five;
+		}
+	}
+	&.color-six {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-six;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-six;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-six, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-six, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-six, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-six;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-six;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-six;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-six;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-six, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-six, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-six, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-six;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-six;
+		}
+	}
+	&.color-seven {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-seven;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-seven;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-seven, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-seven, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-seven, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-seven;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-seven;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-seven;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-seven;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-seven, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-seven, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-seven, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-seven;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-seven;
+		}
+	}
+	&.color-eight {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-eight;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-eight;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-eight, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-eight, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-eight, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-eight;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-eight;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-eight;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-eight;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-eight, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-eight, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-eight, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-eight;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-eight;
+		}
+	}
+	&.color-nine {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-nine;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-nine;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-nine, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-nine, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-nine, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-nine;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-nine;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-nine;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-nine;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-nine, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-nine, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-nine, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-nine;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-nine;
+		}
+	}
+	&.color-ten {
+		.graphic-component {
+			&.matchblock {
+				.graphic-inner img {
+					background-color: @color-ten;
+				}
+			}
+		}
+		.accordion-item-title {
+			background-color: @color-ten;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-ten, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-ten, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@color-ten, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @color-ten;
+		}
+		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+			background-color: @color-ten;
+		}
+		.narrative-component {
+			&.matchblock {
+				.narrative-slider-graphic img {
+					background-color: @color-ten;
+				}
+			}
+		}
+		.mcq-component .mcq-item label {
+			background-color: @color-ten;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-ten, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-ten, 20%);
+				}
+			}
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@color-ten, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @color-ten;
+		}
+		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+			color: black;
+		}
+		.buttons button {
+			background-color: @color-ten;
+		}
+	}
+	&.inverted {
+		a, a:hover, a:visited {
+			color: @primary-color-inverted;
+		}
+		.buttons button {
+			background-color: @white;
+		}
+		.narrative-component .narrative-progress {
+			background-color: @primary-color-inverted;
+			border: 1px solid @primary-color-inverted;
+		}
+		.accordion-item-title {
+			background-color: @primary-color-inverted;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@primary-color-inverted, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@primary-color-inverted, 20%);
+				}
+			}
+		}
+		.accordion-item-title:hover {
+			background-color: darken(@primary-color-inverted, 20%);
+		}
+		.accordion-item-body {
+			border: 3px solid @primary-color-inverted;
+			color: @primary-color-inverted;
+		}
+		.mcq-component .mcq-item, .mcq-component .mcq-item label {
+			background-color: @primary-color-inverted;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@primary-color-inverted, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@primary-color-inverted, 20%);
+				}
+			}
+		}
+		.mcq-component .mcq-item:hover {
+			background-color: darken(@primary-color-inverted, 20%);
+		}
+		.mcq-component .incorrect label {
+			background-color: darken(@primary-color-inverted, 20%);
+		}
+		.mcq-widget.disabled .mcq-item label.selected.disabled {
+			background-color: @primary-color-inverted;
+		}
+		&.color-one {
+			background-color: @color-one;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-one;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-one;
+			}
+			.accordion-item-body {
+				background-color: @color-one;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-one;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-one;
+			}
+			.button {
+				background-color: @white;
+				color: @color-one;
+			}
+			.buttons button a {
+				color: @color-one;
+			}
+		}
+		&.color-two {
+			background-color: @color-two;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-two;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-two;
+			}
+			.accordion-item-body {
+				background-color: @color-two;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-two;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-two;
+			}
+			.button {
+				background-color: @white;
+				color: @color-two;
+			}
+			.buttons button a {
+				color: @color-two;
+			}
+		}
+		&.color-three {
+			background-color: @color-three;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-three;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-three;
+			}
+			.accordion-item-body {
+				background-color: @color-three;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-three;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-three;
+			}
+			.button {
+				background-color: @white;
+				color: @color-three;
+			}
+			.buttons button a {
+				color: @color-three;
+			}
+		}
+		&.color-four {
+			background-color: @color-four;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-four;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-four;
+			}
+			.accordion-item-body {
+				background-color: @color-four;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-four;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-four;
+			}
+			.button {
+				background-color: @white;
+				color: @color-four;
+			}
+			.buttons button a {
+				color: @color-four;
+			}
+		}
+		&.color-five {
+			background-color: @color-five;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-five;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-five;
+			}
+			.accordion-item-body {
+				background-color: @color-five;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-five;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-five;
+			}
+			.button {
+				background-color: @white;
+				color: @color-five;
+			}
+			.buttons button a {
+				color: @color-five;
+			}
+		}
+		&.color-six {
+			background-color: @color-six;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-six;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-six;
+			}
+			.accordion-item-body {
+				background-color: @color-six;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-six;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-six;
+			}
+			.button {
+				background-color: @white;
+				color: @color-six;
+			}
+			.buttons button a {
+				color: @color-six;
+			}
+		}
+		&.color-seven {
+			background-color: @color-seven;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-seven;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-seven;
+			}
+			.accordion-item-body {
+				background-color: @color-seven;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-seven;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-seven;
+			}
+			.button {
+				background-color: @white;
+				color: @color-seven;
+			}
+			.buttons button a {
+				color: @color-seven;
+			}
+		}
+		&.color-eight {
+			background-color: @color-eight;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-eight;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-eight;
+			}
+			.accordion-item-body {
+				background-color: @color-eight;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-eight;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-eight;
+			}
+			.button {
+				background-color: @white;
+				color: @color-eight;
+			}
+			.buttons button a {
+				color: @color-eight;
+			}
+		}
+		&.color-nine {
+			background-color: @color-nine;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-nine;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-nine;
+			}
+			.accordion-item-body {
+				background-color: @color-nine;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-nine;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-nine;
+			}
+			.button {
+				background-color: @white;
+				color: @color-nine;
+			}
+			.buttons button a {
+				color: @color-nine;
+			}
+		}
+		&.color-ten {
+			background-color: @color-ten;
+			.narrative-component .narrative-progress.selected {
+				background-color: @color-ten;
+			}
+			.accordion-item-title-icon, .accordion-item-title {
+				color: @color-ten;
+			}
+			.accordion-item-body {
+				background-color: @color-ten;
+			}
+			.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+				color: @color-ten;
+			}
+			.mcq-answer-icon.checkbox {
+				border: 3px solid @color-ten;
+			}
+			.button {
+				background-color: @white;
+				color: @color-ten;
+			}
+			.buttons button a {
+				color: @color-ten;
+			}
+		}
+	}
+}
+.divider-block {
+	background-color: @background-color-inverted;
+	color: @foreground-color-inverted;
+	text-align: center;
+	.block-title,
+	.block-body,
+	.block-instruction,
+	.component-title,
+	.component-body,
+	.component-instruction {
+		color: @foreground-color-inverted;
+		text-align: center;
+	}
+	.component-inner {
+		background-color: transparent;
+	}
+}
+
+// Block background color - used to apply variable based background colors on blocks
+// ======================
+
+.block {
+	&.primary-color {
+		background-color: @primary-color;
+	}
+
+	&.secondary-color {
+		background-color: @secondary-color;
+	}
+
+	&.tertiary-color {
+		background-color: @tertiary-color;
+	}
+
+	&.background-color {
+		background-color: @background-color;
+	}
+
+	&.background-color-inverted {
+		background-color: @background-color-inverted;
+		color: @font-color-inverted;
+		.component-inner {
+			background-color: transparent;
+		}
+	}
+}
+
+// Component background - used to apply variable based background color and padding on components
+// ====================
+
+.component-background {
+	background-color: @component-background-color;
+	padding: @component-padding;
+}
+
+// Assessment - remove graphic components for mobile view (when components snap down to single span).
+// ==========
+
+.assessment {
+	.graphic-component {
+		display: block;
+
+		@media all and (max-width: @device-width-medium) {
+			display: none;
+		}
+	}
+}
+
+// THIS CLASS IS FOR THE PURPOSE OF THE ADAPT DEMO 
+// blank component demo - applied at block level to add a background image in place of a blank component
+// ====================
+
+.blank-background {
+	background-image: url(assets/blank-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@media all and (max-width: @device-width-large) {
+		background-image: url(assets/blank-bg-900.jpg);
+		background-position: right;
+	}
+
+	@media all and (max-width: @device-width-medium) {
+		background-image: none;
+	}
+}
