@@ -9,7 +9,7 @@
 body {
 	background: #f3f2f2 url('assets/cubes.png');
 	background-position: 5px 5px;
-	font-family: "Helvetica Neue",Arial,sans-serif;
+	font-family: @font-family;
 	font-weight: 300;
 	color: #6d6d6d;
 	font-size: 17px;
@@ -18,10 +18,14 @@ body {
 .icon-home {
 	padding-right: 0;
 	float: left;
-	display: none;
+	& when (@hide-nav = true) {
+		display: none;
+	}
 }
 .navigation-back-button {
-	display: none;
+	& when (@hide-nav = true) {
+		display: none;
+	}
 }
 .about-credit p {
 	display: inline;

@@ -31,17 +31,59 @@
   },
   "properties":{
     "variables": {
-      "_paddings": {
-        "type": "object",
-        "required": false,
-        "title": "Generic",
-        "properties": {
-          "max-width": {
-            "title": "Max width",
-            "help": "The maximum width of the page",
-            "type": "string",
-            "inputType": "text",
-            "default": "1400px"
+      "_paddings" : {
+        "type" : "object",
+        "required" : false,
+        "title" : "Generic",
+        "properties" : {
+            "hide-nav" : {
+              "title" : "Hide navigation icons?",
+              "help" : "Tick this to hide the navigation icons, used in single page courses.",
+              "type" : "boolean",
+              "inputType" : "Boolean",
+              "default" : false
+            },
+            "max-width" : {
+              "title" : "Max width",
+              "help" : "The maximum width of the page",
+              "type" : "string",
+              "inputType" : "Text",
+              "default" : "1400px"
+            },
+            "device-width-small" : {
+              "title" : "Small device width",
+              "help" : "Break point for small device layout",
+              "type" : "string",
+              "inputType" : "Text",
+              "default" : "520px"
+            },
+            "device-width-medium" : {
+              "title" : "Medium device width",
+              "help" : "Break point for medium size device layout",
+              "type" : "string",
+              "inputType" : "Text",
+              "default" : "520px"
+            },
+            "device-width-large" : {
+              "title" : "Large device width",
+              "help" : "Break point for large size device layout",
+              "type" : "string",
+              "inputType" : "Text",
+              "default" : "900px"
+            }
+          }
+        },
+        "_fonts" : {
+          "type" : "object",
+          "required" : false,
+          "title" : "Fonts",
+          "properties" : {
+            "font-family" : {
+            "title" : "Font family",
+            "help" : "The font family",
+            "type" : "The font-family property should hold several font names as a fallback system, to ensure maximum compatibility between browsers/operating systems. If the browser does not support the first font, it tries the next font. Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available:",
+            "inputType" : "Text",
+            "default" : "'Open Sans', Helvetica, Arial, sans-serif"
           }
         }
       },
