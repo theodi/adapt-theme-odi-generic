@@ -31,6 +31,20 @@
   },
   "properties":{
     "variables": {
+      "_paddings": {
+        "type": "object",
+        "required": false,
+        "title": "Generic",
+        "properties": {
+          "max-width": {
+            "title": "Max width",
+            "help": "The maximum width of the page",
+            "type": "string",
+            "inputType": "text",
+            "default": "1400px"
+          }
+        }
+      },
       "_colors": {
         "type": "object",
         "required": false,
