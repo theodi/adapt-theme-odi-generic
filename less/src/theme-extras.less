@@ -118,6 +118,19 @@ h5 {
 }
 .setColour(@color) {
 	.block {
+		.setNormal(@color);
+	}
+	.block:nth-child(odd) {
+		.setInverted(@color)
+	}
+}
+.block {
+	&.inverted {
+		//TODO
+		.setInverted(@color)
+	}
+}
+.setNormal(@color) {
 		.narrative-component {
 			.narrative-slider-graphic img {
 				background-color: @color;
@@ -181,7 +194,8 @@ h5 {
 			background-color: @color;
 		}
 	}	
-	.block:nth-child(odd) {
+
+.setInverted(color) {
 		a, a:hover, a:visited {
 			color: @primary-color-inverted;
 		}
@@ -254,7 +268,6 @@ h5 {
 			color: @color;
 		}
 	}
-}
 
 .block {
         &.hidden {
