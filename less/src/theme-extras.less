@@ -119,155 +119,214 @@ h5 {
 .setColour(@color) {
 	.block {
 		.setNormal(@color);
+		&.color-one { .setNormal(@color-one); }
+		&.color-two { .setNormal(@color-two); }
+		&.color-three { .setNormal(@color-three); }
+		&.color-four { .setNormal(@color-four); }
+		&.color-five { .setNormal(@color-five); }
+		&.color-six { .setNormal(@color-six); }
+		&.color-seven { .setNormal(@color-seven); }
+		&.color-eight { .setNormal(@color-eight); }
+		&.color-nine { .setNormal(@color-nine); }
+		&.color-ten { .setNormal(@color-ten); }	
+		&.inverted {
+			.setInverted(@color);
+			&.color-one { .setInverted(@color-one); }
+			&.color-two { .setInverted(@color-two); }
+			&.color-three { .setInverted(@color-three); }
+			&.color-four { .setInverted(@color-four); }
+			&.color-five { .setInverted(@color-five); }
+			&.color-six { .setInverted(@color-six); }
+			&.color-seven { .setInverted(@color-seven); }
+			&.color-eight { .setInverted(@color-eight); }
+			&.color-nine { .setInverted(@color-nine); }
+			&.color-ten { .setInverted(@color-ten); }	
+		}
 	}
-	.block:nth-child(odd) {
-		.setInverted(@color)
+	.block:nth-child(odd):not(.notinverted) {
+		.setInverted(@color);
 	}
 }
 .block {
+	&.color-one { .setNormal(@color-one); }
+	&.color-two { .setNormal(@color-two); }
+	&.color-three { .setNormal(@color-three); }
+	&.color-four { .setNormal(@color-four); }
+	&.color-five { .setNormal(@color-five); }
+	&.color-six { .setNormal(@color-six); }
+	&.color-seven { .setNormal(@color-seven); }
+	&.color-eight { .setNormal(@color-eight); }
+	&.color-nine { .setNormal(@color-nine); }
+	&.color-ten { .setNormal(@color-ten); }	
 	&.inverted {
-		//TODO
-		.setInverted(@color)
+		&.color-one { .setInverted(@color-one); }
+		&.color-two { .setInverted(@color-two); }
+		&.color-three { .setInverted(@color-three); }
+		&.color-four { .setInverted(@color-four); }
+		&.color-five { .setInverted(@color-five); }
+		&.color-six { .setInverted(@color-six); }
+		&.color-seven { .setInverted(@color-seven); }
+		&.color-eight { .setInverted(@color-eight); }
+		&.color-nine { .setInverted(@color-nine); }
+		&.color-ten { .setInverted(@color-ten); }	
 	}
 }
 .setNormal(@color) {
-		.narrative-component {
+	.narrative-component {
+		.narrative-slider-graphic img {
+			background-color: @color;
+		}
+	}
+	.graphic-component {
+		&.matchblock {
+			.graphic-inner img {
+				background-color: @color;
+			}
+		}
+	}
+	.accordion-item-title {
+		background-color: @color;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@color, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@color, 20%);
+			}
+		}
+	}
+	.accordion-item-title:hover {
+		background-color: darken(@color, 20%);
+	}
+	.accordion-item-body {
+		border: 3px solid @color;
+	}
+	.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+		background-color: @color;
+	}
+	.narrative-component {
+		&.matchblock {
 			.narrative-slider-graphic img {
 				background-color: @color;
 			}
 		}
-		.graphic-component {
-			&.matchblock {
-				.graphic-inner img {
-					background-color: @color;
-				}
-			}
-		}
-		.accordion-item-title {
-			background-color: @color;
-			.no-touch & {
-				&:hover {
-					background-color: darken(@color, 20%);
-				}
-				&.visited:hover {
-					background-color: darken(@color, 20%);
-				}
-			}
-		}
-		.accordion-item-title:hover {
-			background-color: darken(@color, 20%);
-		}
-		.accordion-item-body {
-			border: 3px solid @color;
-		}
-		.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
-			background-color: @color;
-		}
-		.narrative-component {
-			&.matchblock {
-				.narrative-slider-graphic img {
-					background-color: @color;
-				}
-			}
-		}
-		.mcq-component .mcq-item label {
-			background-color: @color;
-			.no-touch & {
-				&:hover {
-					background-color: darken(@color, 20%);
-				}
-				&.visited:hover {
-					background-color: darken(@color, 20%);
-				}
-			}
-		}
-		.mcq-component .incorrect label {
-			background-color: darken(@color, 20%);
-		}
-		.mcq-widget.disabled .mcq-item label.selected.disabled {
-			background-color: @color;
-		}
-		.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
-			color: black;
-		}
-		.buttons button {
-			background-color: @color;
-		}
-	}	
-
-.setInverted(color) {
-		a, a:hover, a:visited {
-			color: @primary-color-inverted;
-		}
-		.buttons button {
-			background-color: @white;
-		}
-		.narrative-component .narrative-progress {
-			background-color: @primary-color-inverted;
-			border: 1px solid @primary-color-inverted;
-		}
-		.accordion-item-title {
-			background-color: @primary-color-inverted;
-			.no-touch & {
-				&:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-				&.visited:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-			}
-		}
-		.accordion-item-title:hover {
-			background-color: darken(@primary-color-inverted, 20%);
-		}
-		.accordion-item-body {
-			border: 3px solid @primary-color-inverted;
-			color: @primary-color-inverted;
-		}
-		.mcq-component .mcq-item, .mcq-component .mcq-item label {
-			background-color: @primary-color-inverted;
-			.no-touch & {
-				&:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-				&.visited:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-			}
-		}
-		.mcq-component .mcq-item:hover {
-			background-color: darken(@primary-color-inverted, 20%);
-		}
-		.mcq-component .incorrect label {
-			background-color: darken(@primary-color-inverted, 20%);
-		}
-		.mcq-widget.disabled .mcq-item label.selected.disabled {
-			background-color: @primary-color-inverted;
-		}
+	}
+	.mcq-component .mcq-item label {
 		background-color: @color;
-		.narrative-component .narrative-progress.selected {
-			background-color: @color;
-		}
-		.accordion-item-title-icon, .accordion-item-title {
-			color: @color;
-		}
-		.accordion-item-body {
-			background-color: @color;
-		}
-		.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
-			color: @color;
-		}
-		.mcq-answer-icon.checkbox {
-			border: 3px solid @color;
-		}
-		.button {
-			background-color: @white;
-			color: @color;
-		}
-		.buttons button a {
-			color: @color;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@color, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@color, 20%);
+			}
 		}
 	}
+	.mcq-component .incorrect label {
+		background-color: darken(@color, 20%);
+	}
+	.mcq-widget.disabled .mcq-item label.selected.disabled {
+		background-color: @color;
+	}
+	.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+		color: black;
+	}
+	.buttons button {
+		background-color: @color;
+	}
+}
+	
+.setInverted(@color) {
+	background-color: @color;
+	color: @primary-color-inverted;
+	h1,h2,h3,h4,h5,a, a:hover, a:visited {
+		color: @primary-color-inverted;
+	}
+	.block-title {
+		color: @primary-color-inverted;
+	}
+        .component-title {
+		color: @primary-color-inverted;
+	}
+	.accordian-item-title {
+		background-color: @mid-grey;
+	}
+    	.buttons button {
+		background-color: @button-color-inverted;
+	 	color: @button-color;
+	   	text-decoration: none;
+	}
+	.gmcq-component .gmcq-item-inner, .gmcq-component .gmcq-item, .gmcq-component .gmcq-item label .gmcq-answer-icon, .gmcq-component .gmcq-item label.selected .gmcq-item-inner {
+		color: @primary-color-inverted;
+	}
+	.accordian-item-title {
+		background-color: @mid-grey;
+	}
+	.narrative-component .narrative-progress {
+		background-color: @primary-color-inverted;
+		border: 1px solid @primary-color-inverted;
+	}
+	.accordion-item-title {
+		background-color: @primary-color-inverted;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@primary-color-inverted, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@primary-color-inverted, 20%);
+			}
+		}
+	}
+	.accordion-item-title:hover {
+		background-color: darken(@primary-color-inverted, 20%);
+	}
+	.accordion-item-body {
+		border: 3px solid @primary-color-inverted;
+		color: @primary-color-inverted;
+	}
+	.mcq-component .mcq-item, .mcq-component .mcq-item label {
+		background-color: @primary-color-inverted;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@primary-color-inverted, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@primary-color-inverted, 20%);
+			}
+		}
+	}
+	.mcq-component .mcq-item:hover {
+		background-color: darken(@primary-color-inverted, 20%);
+	}
+	.mcq-component .incorrect label {
+		background-color: darken(@primary-color-inverted, 20%);
+	}
+	.mcq-widget.disabled .mcq-item label.selected.disabled {
+		background-color: @primary-color-inverted;
+	}
+	.narrative-component .narrative-progress.selected {
+		background-color: @color;
+	}
+	.accordion-item-title-icon, .accordion-item-title {
+		color: @color;
+	}
+	.accordion-item-body {
+		background-color: @color;
+	}
+	.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+		color: @color;
+	}
+	.mcq-answer-icon.checkbox {
+		border: 3px solid @color;
+	}
+	.button {
+		background-color: @white;
+		color: @color;
+	}
+	.buttons button a {
+		color: @color;
+	}
+}
 
 .block {
         &.hidden {
@@ -322,56 +381,6 @@ h5 {
 			.graphic-inner img {
 				background-color: white;
 			}
-		}
-	}
-	&.invertedd {
-		a, a:hover, a:visited {
-			color: @primary-color-inverted;
-		}
-		.buttons button {
-			background-color: @white;
-		}
-		.narrative-component .narrative-progress {
-			background-color: @primary-color-inverted;
-			border: 1px solid @primary-color-inverted;
-		}
-		.accordion-item-title {
-			background-color: @primary-color-inverted;
-			.no-touch & {
-				&:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-				&.visited:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-			}
-		}
-		.accordion-item-title:hover {
-			background-color: darken(@primary-color-inverted, 20%);
-		}
-		.accordion-item-body {
-			border: 3px solid @primary-color-inverted;
-			color: @primary-color-inverted;
-		}
-		.mcq-component .mcq-item, .mcq-component .mcq-item label {
-			background-color: @primary-color-inverted;
-			.no-touch & {
-				&:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-				&.visited:hover {
-					background-color: darken(@primary-color-inverted, 20%);
-				}
-			}
-		}
-		.mcq-component .mcq-item:hover {
-			background-color: darken(@primary-color-inverted, 20%);
-		}
-		.mcq-component .incorrect label {
-			background-color: darken(@primary-color-inverted, 20%);
-		}
-		.mcq-widget.disabled .mcq-item label.selected.disabled {
-			background-color: @primary-color-inverted;
 		}
 	}
 }
