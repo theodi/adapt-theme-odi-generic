@@ -17,6 +17,8 @@ It provides some Block classes (add these to the block) to control this:
 Add to article (classes)
 * color-{one,two,three,four,five,six,seven,eight,nine,ten}
 	This is the color used to alternate the color of blocks in an article, leave blank to support legacy control on a per block level.
+* invert-{odd,even}
+	Invert the odd or even numbered blocks (remember counting starts from 0)
 
 Add to block (classes)
 * inverted

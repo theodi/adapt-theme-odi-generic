@@ -104,19 +104,35 @@ h5 {
 	max-height: 70px;
 	display: inline-block;
 }
-.article {
-	&.color-one { .setColour(@color-one); }
-	&.color-two { .setColour(@color-two); }
-	&.color-three { .setColour(@color-three); }
-	&.color-four { .setColour(@color-four); }
-	&.color-five { .setColour(@color-five); }
-	&.color-six { .setColour(@color-six); }
-	&.color-seven { .setColour(@color-seven); }
-	&.color-eight { .setColour(@color-eight); }
-	&.color-nine { .setColour(@color-nine); }
-	&.color-ten { .setColour(@color-ten); }
+.article:not(.invert-even) {
+	@invert: odd; 
+	&.color-one { .setColour(@color-one,@invert); }
+	&.color-two { .setColour(@color-two,@invert); }
+	&.color-three { .setColour(@color-three,@invert); }
+	&.color-four { .setColour(@color-four,@invert); }
+	&.color-five { .setColour(@color-five,@invert); }
+	&.color-six { .setColour(@color-six,@invert); }
+	&.color-seven { .setColour(@color-seven,@invert); }
+	&.color-eight { .setColour(@color-eight,@invert); }
+	&.color-nine { .setColour(@color-nine,@invert); }
+	&.color-ten { .setColour(@color-ten,@invert); }
 }
-.setColour(@color) {
+.article {
+	&.invert-even {
+		@invert: even;
+		&.color-one { .setColour(@color-one,@invert); }
+		&.color-two { .setColour(@color-two,@invert); }
+		&.color-three { .setColour(@color-three,@invert); }
+		&.color-four { .setColour(@color-four,@invert); }
+		&.color-five { .setColour(@color-five,@invert); }
+		&.color-six { .setColour(@color-six,@invert); }
+		&.color-seven { .setColour(@color-seven,@invert); }
+		&.color-eight { .setColour(@color-eight,@invert); }
+		&.color-nine { .setColour(@color-nine,@invert); }
+		&.color-ten { .setColour(@color-ten,@invert); }
+	}
+}
+.setColour(@color,@invert) {
 	.block {
 		.setNormal(@color);
 		&.color-one { .setNormal(@color-one); }
@@ -143,7 +159,7 @@ h5 {
 			&.color-ten { .setInverted(@color-ten); }	
 		}
 	}
-	.block:nth-child(odd):not(.notinverted) {
+	.block:nth-child(@{invert}):not(.notinverted) {
 		.setInverted(@color);
 	}
 }
