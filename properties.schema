@@ -92,6 +92,13 @@
         "required": false,
         "title": "Colours",
         "properties": {
+          "menu-color-count": {
+            "title": "Menu colour count",
+            "help": "The number of different colours used in the menu blocks, starts with colour one and then cycles until n.",
+            "type": "string",
+            "inputType": "Text",
+            "default": "3"
+          },
           "color-one": {
             "title": "Colour one (Primary colour)",
             "help": "This is the primary colour used to style the course, and is applied to component items and pop-up notifications.",
