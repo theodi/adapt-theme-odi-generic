@@ -31,11 +31,11 @@ body {
 	display: inline;
 }
 
-.boxmenu-loop (@i) when (@i > 0) {
+.boxmenu-loop (@i,@k) when (@i > 0) {
     @j: (@i - 1);
     @color: extract(@colors, @i);
     @inverted: extract(@colors, @i);
-    menu-item:nth-child(@{i}n+@{j}) {
+    menu-item:nth-child(@{k}n+@{j}) {
       .menu-item-inner-block {
         background-color: @color;
         color: @inverted;
@@ -51,7 +51,7 @@ body {
         background-color: @color;
       }
     }
-    .boxmenu-loop(@i - 1);
+    .boxmenu-loop(@i - 1,@k);
 }
 
 .menu {
@@ -63,7 +63,7 @@ body {
 			width: 100%;
 		}
 	}
-	.boxmenu-loop(@menu-color-count);
+	.boxmenu-loop(@menu-color-count, @menu-color-count);
 }
 
 .graphic-attribution {
