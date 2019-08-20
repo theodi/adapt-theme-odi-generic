@@ -30,6 +30,30 @@ body {
 .about-credit p {
 	display: inline;
 }
+
+.boxmenu-loop (@i) when (@i > 0) {
+    @j: (@i - 1);
+    @color: extract(@colors, @i);
+    @inverted: extract(@colors, @i);
+    menu-item:nth-child(@{i}n+@{j}) {
+      .menu-item-inner-block {
+        background-color: @color;
+        color: @inverted;
+      }
+      .menu-item-button {
+        background-color: @inverted;
+        color: @color;
+      }
+      .page-level-progress-menu-item-indicator {
+        background-color: @inverted;
+      }
+      .page-level-progress-menu-item-indicator-bar{
+        background-color: @color;
+      }
+    }
+    .boxmenu-loop(@i - 1);
+}
+
 .menu {
 	.menu-item {
 		@media all and (max-width: @device-width-medium) {
@@ -39,7 +63,9 @@ body {
 			width: 100%;
 		}
 	}
+	.boxmenu-loop(@menu-color-count);
 }
+
 .graphic-attribution {
     position: relative;
     background-color: rgba(100,100,100,0.85);
