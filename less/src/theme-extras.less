@@ -36,7 +36,7 @@ body {
     @color: extract(@colors, @i);
     @inverted: extract(@colors, @i);
     menu-item:nth-child(@{k}n+@{j}) {
-      .menu-item-inner-block {
+      .menu-item-inner {
         background-color: @color;
         color: @inverted;
       }

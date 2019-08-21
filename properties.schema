@@ -148,12 +148,26 @@
             "inputType": "ColourPicker",
             "default": "#ff9000"
           },
+          "color-four-inverted": {
+            "title": "Colour four Inverted",
+            "help": "This is the inverted fourth colour, and is applied to text that is displayed on elements coloured with colour four.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
           "color-five": {
             "title": "Colour five",
             "help": "A fifth theme colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#de4a8d"
+          },
+          "color-five-inverted": {
+            "title": "Colour five Inverted",
+            "help": "This is the inverted fifth colour, and is applied to text that is displayed on elements coloured with colour five.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
           },
           "color-six": {
             "title": "Colour six",
@@ -162,12 +176,26 @@
             "inputType": "ColourPicker",
             "default": "#ff6600"
           },
+          "color-six-inverted": {
+            "title": "Colour six Inverted",
+            "help": "This is the inverted sixth colour, and is applied to text that is displayed on elements coloured with colour six.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
           "color-seven": {
             "title": "Colour seven",
             "help": "A seventh theme colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#333666"
+          },
+          "color-seven-inverted": {
+            "title": "Colour seven Inverted",
+            "help": "This is the inverted seventh colour, and is applied to text that is displayed on elements coloured with colour seven.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
           },
           "color-eight": {
             "title": "Colour eight",
@@ -176,6 +204,13 @@
             "inputType": "ColourPicker",
             "default": "#006699"
           },
+          "color-eight-inverted": {
+            "title": "Colour eight Inverted",
+            "help": "This is the inverted eigth colour, and is applied to text that is displayed on elements coloured with colour eight.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
           "color-nine": {
             "title": "Colour nine",
             "help": "A ninth theme colour",
@@ -183,12 +218,26 @@
             "inputType": "ColourPicker",
             "default": "#006633"
           },
+          "color-nine-inverted": {
+            "title": "Colour nine Inverted",
+            "help": "This is the inverted ninth colour, and is applied to text that is displayed on elements coloured with colour nine.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
           "color-ten": {
             "title": "Colour ten",
             "help": "A tenth theme colour",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#000000"
+          },
+          "color-ten-inverted": {
+            "title": "Colour ten Inverted",
+            "help": "This is the inverted tenth colour, and is applied to text that is displayed on elements coloured with colour ten.",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
           },
           "quaternary-color": {
             "title": "Drawer colour",
