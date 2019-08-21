@@ -33,14 +33,15 @@ body {
 
 .boxmenu-loop (@i,@k) when (@i > 0) {
     @j: (@i - 1);
-    @color: extract(@colors, @i);
-    @inverted: extract(@colors, @i);
+    @cindex: (@k - @j);
+    @color: extract(@colors, @cindex);
+    @inverted: extract(@colors-inverted, @cindex);
     .menu-item:nth-child(@{k}n+@{j}) {
       .menu-item-inner {
         background-color: @color;
         color: @inverted;
       }
-      .menu-item-button {
+      .menu-item-button button {
         background-color: @inverted;
         color: @color;
       }
