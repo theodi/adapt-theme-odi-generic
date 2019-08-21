@@ -33,27 +33,43 @@ body {
 
 .boxmenu-loop (@i,@k) when (@i > 0) {
     @j: (@i - 1);
-    @cindex: (@k - @j);
-    @color: extract(@colors, @cindex);
-    @inverted: extract(@colors-inverted, @cindex);
-    .menu-item:nth-child(@{k}n+@{j}) {
-      .menu-item-inner {
-        background-color: @color;
-        color: @inverted;
-      }
-      .menu-item-button button {
-        background-color: @inverted;
-        color: @color;
-      }
-      .page-level-progress-menu-item-indicator {
-        background-color: @inverted;
-      }
-      .page-level-progress-menu-item-indicator-bar{
-        background-color: @color;
-      }
+    .menu-item:nth-child(@{k}n+@{j}) when (@j > 1) {
+      @cindex: (@j - 1);
+      @color: extract(@colors, @cindex);
+      @inverted: extract(@colors-inverted, @cindex);
+      .boxmenu-inner(@color,@inverted);
     }
+    .menu-item:nth-child(@{k}n+@{j}) when (@j = 1) {
+      @color: extract(@colors, @k);
+      @inverted: extract(@colors-inverted, @k);
+      .boxmenu-inner(@color,@inverted);
+    }
+    .menu-item:nth-child(@{k}n+@{j}) when (@j = 0) {
+      @cindex: (@k - 1);
+      @color: extract(@colors, @cindex);
+      @inverted: extract(@colors-inverted, @cindex);
+      .boxmenu-inner(@color,@inverted);
+    }   
     .boxmenu-loop(@i - 1,@k);
 }
+
+.boxmenu-inner(@color,@inverted) {
+	.menu-item-inner {
+    	background-color: @color;
+        color: @inverted;
+    }
+    .menu-item-button button {
+        background-color: @inverted;
+        color: @color;
+    }
+    .page-level-progress-menu-item-indicator {
+        background-color: @inverted;
+    }
+    .page-level-progress-menu-item-indicator-bar{
+        background-color: @color;
+    }
+}
+
 
 .menu {
 	.menu-item {
