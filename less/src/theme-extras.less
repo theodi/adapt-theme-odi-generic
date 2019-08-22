@@ -148,89 +148,99 @@ h5 {
 	display: inline-block;
 }
 .article:not(.invert-even) {
-	@invert: odd; 
-	&.color-one { .setColour(@color-one,@invert); }
-	&.color-two { .setColour(@color-two,@invert); }
-	&.color-three { .setColour(@color-three,@invert); }
-	&.color-four { .setColour(@color-four,@invert); }
-	&.color-five { .setColour(@color-five,@invert); }
-	&.color-six { .setColour(@color-six,@invert); }
-	&.color-seven { .setColour(@color-seven,@invert); }
-	&.color-eight { .setColour(@color-eight,@invert); }
-	&.color-nine { .setColour(@color-nine,@invert); }
-	&.color-ten { .setColour(@color-ten,@invert); }
+	@invert: odd;
+	&.color-one { .setColour(@color-one,@color-one-inverted,@invert); }
+	&.color-two { .setColour(@color-two,@color-two-inverted,@invert); }
+	&.color-three { .setColour(@color-three,@color-three-inverted,@invert); }
+	&.color-four { .setColour(@color-four,@color-four-inverted,@invert); }
+	&.color-five { .setColour(@color-five,@color-five-inverted,@invert); }
+	&.color-six { .setColour(@color-six,@color-six-inverted,@invert); }
+	&.color-seven { .setColour(@color-seven,@color-seven-inverted,@invert); }
+	&.color-eight { .setColour(@color-eight,@color-eight-inverted,@invert); }
+	&.color-nine { .setColour(@color-nine,@color-nine-inverted,@invert); }
+	&.color-ten { .setColour(@color-ten,@color-ten-inverted,@invert); }
 }
 .article {
 	&.invert-even {
 		@invert: even;
-		&.color-one { .setColour(@color-one,@invert); }
-		&.color-two { .setColour(@color-two,@invert); }
-		&.color-three { .setColour(@color-three,@invert); }
-		&.color-four { .setColour(@color-four,@invert); }
-		&.color-five { .setColour(@color-five,@invert); }
-		&.color-six { .setColour(@color-six,@invert); }
-		&.color-seven { .setColour(@color-seven,@invert); }
-		&.color-eight { .setColour(@color-eight,@invert); }
-		&.color-nine { .setColour(@color-nine,@invert); }
-		&.color-ten { .setColour(@color-ten,@invert); }
+		&.color-one { .setColour(@color-one,@color-one-inverted,@invert); }
+		&.color-two { .setColour(@color-two,@color-two-inverted,@invert); }
+		&.color-three { .setColour(@color-three,@color-three-inverted,@invert); }
+		&.color-four { .setColour(@color-four,@color-four-inverted,@invert); }
+		&.color-five { .setColour(@color-five,@color-five-inverted,@invert); }
+		&.color-six { .setColour(@color-six,@color-six-inverted,@invert); }
+		&.color-seven { .setColour(@color-seven,@color-seven-inverted,@invert); }
+		&.color-eight { .setColour(@color-eight,@color-eight-inverted,@invert); }
+		&.color-nine { .setColour(@color-nine,@color-nine-inverted,@invert); }
+		&.color-ten { .setColour(@color-ten,@color-ten-inverted,@invert); }
 	}
 }
-.setColour(@color,@invert) {
+.setColour(@color,@color-inverted,@invert) {
 	.block {
-		.setNormal(@color);
-		&.color-one { .setNormal(@color-one); }
-		&.color-two { .setNormal(@color-two); }
-		&.color-three { .setNormal(@color-three); }
-		&.color-four { .setNormal(@color-four); }
-		&.color-five { .setNormal(@color-five); }
-		&.color-six { .setNormal(@color-six); }
-		&.color-seven { .setNormal(@color-seven); }
-		&.color-eight { .setNormal(@color-eight); }
-		&.color-nine { .setNormal(@color-nine); }
-		&.color-ten { .setNormal(@color-ten); }	
+		.setNormal(@color,@color-inverted);
+		&.color-one { .setNormal(@color-one,@color-one-inverted); }
+		&.color-two { .setNormal(@color-two,@color-two-inverted); }
+		&.color-three { .setNormal(@color-three,@color-three-inverted); }
+		&.color-four { .setNormal(@color-four,@color-four-inverted); }
+		&.color-five { .setNormal(@color-five,@color-five-inverted); }
+		&.color-six { .setNormal(@color-six,@color-six-inverted); }
+		&.color-seven { .setNormal(@color-seven,@color-seven-inverted); }
+		&.color-eight { .setNormal(@color-eight,@color-eight-inverted); }
+		&.color-nine { .setNormal(@color-nine,@color-nine-inverted); }
+		&.color-ten { .setNormal(@color-ten,@color-ten-inverted); }	
 		&.inverted {
-			.setInverted(@color);
-			&.color-one { .setInverted(@color-one); }
-			&.color-two { .setInverted(@color-two); }
-			&.color-three { .setInverted(@color-three); }
-			&.color-four { .setInverted(@color-four); }
-			&.color-five { .setInverted(@color-five); }
-			&.color-six { .setInverted(@color-six); }
-			&.color-seven { .setInverted(@color-seven); }
-			&.color-eight { .setInverted(@color-eight); }
-			&.color-nine { .setInverted(@color-nine); }
-			&.color-ten { .setInverted(@color-ten); }	
+			.setInverted(@color,@color-inverted);
+			&.color-one { .setInverted(@color-one,@color-one-inverted); }
+			&.color-two { .setInverted(@color-two,@color-two-inverted); }
+			&.color-three { .setInverted(@color-three,@color-three-inverted); }
+			&.color-four { .setInverted(@color-four,@color-four-inverted); }
+			&.color-five { .setInverted(@color-five,@color-five-inverted); }
+			&.color-six { .setInverted(@color-six,@color-six-inverted); }
+			&.color-seven { .setInverted(@color-seven,@color-seven-inverted); }
+			&.color-eight { .setInverted(@color-eight,@color-eight-inverted); }
+			&.color-nine { .setInverted(@color-nine,@color-nine-inverted); }
+			&.color-ten { .setInverted(@color-ten,@color-ten-inverted); }	
 		}
 	}
 	.block:nth-child(@{invert}):not(.notinverted) {
-		.setInverted(@color);
+		.setInverted(@color,@color-inverted);
 	}
 }
 .block {
-	&.color-one { .setNormal(@color-one); }
-	&.color-two { .setNormal(@color-two); }
-	&.color-three { .setNormal(@color-three); }
-	&.color-four { .setNormal(@color-four); }
-	&.color-five { .setNormal(@color-five); }
-	&.color-six { .setNormal(@color-six); }
-	&.color-seven { .setNormal(@color-seven); }
-	&.color-eight { .setNormal(@color-eight); }
-	&.color-nine { .setNormal(@color-nine); }
-	&.color-ten { .setNormal(@color-ten); }	
+	&.color-one { .setNormal(@color-one,@color-one-inverted); }
+	&.color-two { .setNormal(@color-two,@color-two-inverted); }
+	&.color-three { .setNormal(@color-three,@color-three-inverted); }
+	&.color-four { .setNormal(@color-four,@color-four-inverted); }
+	&.color-five { .setNormal(@color-five,@color-five-inverted); }
+	&.color-six { .setNormal(@color-six,@color-six-inverted); }
+	&.color-seven { .setNormal(@color-seven,@color-seven-inverted); }
+	&.color-eight { .setNormal(@color-eight,@color-eight-inverted); }
+	&.color-nine { .setNormal(@color-nine,@color-nine-inverted); }
+	&.color-ten { .setNormal(@color-ten,@color-ten-inverted); }	
 	&.inverted {
-		&.color-one { .setInverted(@color-one); }
-		&.color-two { .setInverted(@color-two); }
-		&.color-three { .setInverted(@color-three); }
-		&.color-four { .setInverted(@color-four); }
-		&.color-five { .setInverted(@color-five); }
-		&.color-six { .setInverted(@color-six); }
-		&.color-seven { .setInverted(@color-seven); }
-		&.color-eight { .setInverted(@color-eight); }
-		&.color-nine { .setInverted(@color-nine); }
-		&.color-ten { .setInverted(@color-ten); }	
+		&.color-one { .setInverted(@color-one,@color-one-inverted); }
+		&.color-two { .setInverted(@color-two,@color-two-inverted); }
+		&.color-three { .setInverted(@color-three,@color-three-inverted); }
+		&.color-four { .setInverted(@color-four,@color-four-inverted); }
+		&.color-five { .setInverted(@color-five,@color-five-inverted); }
+		&.color-six { .setInverted(@color-six,@color-six-inverted); }
+		&.color-seven { .setInverted(@color-seven,@color-seven-inverted); }
+		&.color-eight { .setInverted(@color-eight,@color-eight-inverted); }
+		&.color-nine { .setInverted(@color-nine,@color-nine-inverted); }
+		&.color-ten { .setInverted(@color-ten,@color-ten-inverted); }	
 	}
 }
-.setNormal(@color) {
+.setNormal(@color,@color-inverted) {
+	.button {
+		background-color: @color;
+		color: @color-inverted;
+		text-decoration: none;
+	}
+	a {
+		&.button {
+			color: @color-inverted;
+		}
+	}
 	.narrative-component {
 		.narrative-slider-graphic img {
 			background-color: @color;
@@ -290,78 +300,80 @@ h5 {
 	.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
 		color: black;
 	}
-	.buttons button {
-		background-color: @color;
-	}
 }
 	
-.setInverted(@color) {
+.setInverted(@color,@color-inverted) {
 	background-color: @color;
-	color: @primary-color-inverted;
+	color: @color-inverted;
 	h1,h2,h3,h4,h5,a, a:hover, a:visited {
-		color: @primary-color-inverted;
+		color: @color-inverted;
+	}
+	.button {
+		background-color: @color-inverted;
+		color: @color;
+		text-decoration: none;
+	}
+	a {
+		&.button {
+			color: @color;
+		}
 	}
 	.block-title {
-		color: @primary-color-inverted;
+		color: @color-inverted;
 	}
-        .component-title {
-		color: @primary-color-inverted;
+    .component-title {
+		color: @color-inverted;
 	}
 	.accordian-item-title {
 		background-color: @mid-grey;
 	}
-    	.buttons button {
-		background-color: @button-color-inverted;
-	 	color: @button-color;
-	   	text-decoration: none;
-	}
 	.gmcq-component .gmcq-item-inner, .gmcq-component .gmcq-item, .gmcq-component .gmcq-item label .gmcq-answer-icon, .gmcq-component .gmcq-item label.selected .gmcq-item-inner {
-		color: @primary-color-inverted;
+		color: @color-inverted;
 	}
 	.accordian-item-title {
 		background-color: @mid-grey;
 	}
 	.narrative-component .narrative-progress {
-		background-color: @primary-color-inverted;
-		border: 1px solid @primary-color-inverted;
+		background-color: @color-inverted;
+		border: 1px solid @color-inverted;
 	}
 	.accordion-item-title {
-		background-color: @primary-color-inverted;
+		background-color: @color-inverted;
 		.no-touch & {
 			&:hover {
-				background-color: darken(@primary-color-inverted, 20%);
+				background-color: darken(@color-inverted, 20%);
 			}
 			&.visited:hover {
-				background-color: darken(@primary-color-inverted, 20%);
+				background-color: darken(@color-inverted, 20%);
 			}
 		}
 	}
 	.accordion-item-title:hover {
-		background-color: darken(@primary-color-inverted, 20%);
+		background-color: darken(@color-inverted, 20%);
 	}
 	.accordion-item-body {
-		border: 3px solid @primary-color-inverted;
-		color: @primary-color-inverted;
+		border: 3px solid @color-inverted;
+		color: @color-inverted;
 	}
 	.mcq-component .mcq-item, .mcq-component .mcq-item label {
-		background-color: @primary-color-inverted;
+		background-color: @color-inverted;
 		.no-touch & {
 			&:hover {
-				background-color: darken(@primary-color-inverted, 20%);
+				background-color: darken(@color-inverted, 20%);
 			}
 			&.visited:hover {
-				background-color: darken(@primary-color-inverted, 20%);
+				background-color: darken(@color-inverted, 20%);
 			}
 		}
 	}
 	.mcq-component .mcq-item:hover {
-		background-color: darken(@primary-color-inverted, 20%);
+		background-color: darken(@color-inverted, 20%);
 	}
 	.mcq-component .incorrect label {
-		background-color: darken(@primary-color-inverted, 20%);
+		background-color: darken(@color-inverted, 20%);
 	}
 	.mcq-widget.disabled .mcq-item label.selected.disabled {
-		background-color: @primary-color-inverted;
+		background-color: @color-inverted;
 	}
 	.narrative-component .narrative-progress.selected {
 		background-color: @color;
@@ -377,13 +389,6 @@ h5 {
 	}
 	.mcq-answer-icon.checkbox {
 		border: 3px solid @color;
-	}
-	.button {
-		background-color: @white;
-		color: @color;
-	}
-	.buttons button a {
-		color: @color;
 	}
 }
 
