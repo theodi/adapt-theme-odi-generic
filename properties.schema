@@ -105,7 +105,14 @@
             "type": "string",
             "inputType": "Asset:image",
             "default": ""
-          },
+          }
+        }
+      },
+      "_paddings": {
+       "type": "object",
+       "required": false,
+       "title": "Navigation logo paddings",
+       "properties": {
           "navigation-logo-height": {
             "title": "Navigation logo height",
             "help": "The height of the navigation logo",
