@@ -87,6 +87,27 @@
           }
         }
       },
+      "_images": {
+        "type": "object",
+        "required": false,
+        "title": "Images",
+        "properties": {
+          "theme-logo": {
+            "title": "First block logo",
+            "help": "This is the logo image, it will be displayed in any graphic commponent with the 'intro-logo' class.",
+            "type": "string",
+            "inputType": "Asset:image",
+            "default": ""
+          },
+          "navigation-logo": {
+            "title": "Nav bar logo",
+            "help": "This is the logo image, it will be displayed in the top left of the navigation bar.",
+            "type": "string",
+            "inputType": "Asset:image",
+            "default": ""
+          }
+        }
+      },
       "_colors": {
         "type": "object",
         "required": false,

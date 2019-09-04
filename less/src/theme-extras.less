@@ -147,6 +147,12 @@ h5 {
 	max-height: 70px;
 	display: inline-block;
 }
+.navigation {
+	img.navigation-logo {
+		content: url("@{navigation-logo}");
+	}
+}
+
 .article:not(.invert-even) {
 	@invert: odd;
 	&.color-one { .setColour(@color-one,@color-one-inverted,@invert); }
@@ -426,7 +432,7 @@ h5 {
 				text-align: center;
 			}
 			.graphic-inner img {
-				content: url("assets/intro-logo.png");
+				content: url("@{theme-logo}");
 				max-height: 200px;
 			}
 			.graphic-attribution {
