@@ -105,6 +105,48 @@
             "type": "string",
             "inputType": "Asset:image",
             "default": ""
+          },
+          "navigation-logo-height": {
+            "title": "Navigation logo height",
+            "help": "The height of the navigation logo",
+            "type": "string",
+            "inputType": "Text",
+            "default": "60px"
+          },
+          "navigation-logo-height-mobile": {
+            "title": "Navigation logo height (mobile)",
+            "help": "The height of the navigation logo on small screens",
+            "type": "string",
+            "inputType": "Text",
+            "default": "50px"
+          },
+          "navigation-logo-padding-top": {
+            "title": "Navigation logo top padding",
+            "help": "The padding above the navigation logo",
+            "type": "string",
+            "inputType": "Text",
+            "default": "5px"
+          },
+          "navigation-logo-padding-top-mobile": {
+            "title": "Navigation logo top padding (mobile)",
+            "help": "he padding above the navigation logo on small screens",
+            "type": "string",
+            "inputType": "Text",
+            "default": "3px"
+          },
+          "navigation-logo-padding-left": {
+            "title": "Navigation logo left padding",
+            "help": "The padding to the left the navigation logo",
+            "type": "string",
+            "inputType": "Text",
+            "default": "5px"
+          },
+          "navigation-logo-padding-left-mobile": {
+            "title": "Navigation logo left padding (mobile)",
+            "help": "he padding to the left the navigation logo on small screens",
+            "type": "string",
+            "inputType": "Text",
+            "default": "3px"
           }
         }
       },

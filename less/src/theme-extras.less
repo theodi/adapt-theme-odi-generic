@@ -150,6 +150,15 @@ h5 {
 .navigation {
 	img.navigation-logo {
 		content: url("@{navigation-logo}");
+		float: left;
+		height: @navigation-logo-height;
+		padding-top: @navigation-logo-padding-top;
+		padding-left: @navigation-logo-padding-left;
+		@media all and (max-width: @device-width-small) {
+			height: @navigation-logo-height-mobile;
+			padding-top: @navigation-logo-padding-top-mobile;
+			padding-left: @navigation-logo-padding-left-mobile;
+		}
 	}
 }
 
