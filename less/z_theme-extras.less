@@ -1,0 +1,455 @@
+// Additional theme classes or attributes to be applied in JSON for more custom style 
+// ====================================================================
+
+// Divider block - used to separate content or break up pages. 
+// =============
+
+// Class applies alternative background color and component styling
+
+body {
+	background: #f3f2f2 url('assets/cubes.png');
+	background-position: 5px 5px;
+	font-family: @body-family;
+	font-weight: 300;
+	color: #6d6d6d;
+	font-size: 17px;
+	line-height: 27px;
+}
+
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: @max-width;
+	padding-top: 0px;
+}
+
+.nav  {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: @max-width;
+	position: relative;
+	height: @nav-logo-height;
+	&__back-btn {
+		& when (@hide-nav = true) {
+			display: none;
+		}
+	}
+	&__home-btn {
+	   .u-float-left;
+	   & when (@hide-nav = true) {
+			display: none;
+	   }
+	}
+	&__home-btn .icon {
+	   .icon-home;
+	}
+}
+.footer {
+	background-color: @footer;
+	.block__inner {
+		padding-top: 1rem;
+	}
+	.graphic__attribution {
+		display: none;
+	}
+	.footer-logo {
+		text-align: left;
+		@media all and (max-width: @device-width-medium) {
+			text-align: center;
+			padding-bottom: 20px;
+		}
+		@media all and (max-width: @device-width-small) {
+			padding-bottom: 0px;
+		}
+		img {
+			content: url("@{footer-logo}");
+			max-height: 70px;
+			min-width: auto;
+			display: inline-block;
+		}
+	}
+}
+
+.about-credit p {
+	display: inline;
+}
+
+.graphic-attribution {
+    position: relative;
+    background-color: rgba(100,100,100,0.85);
+    display: inline-block;
+    bottom: 2.5em;
+    padding: 3px;
+    color: white;
+}
+a {
+	color: inherit;
+}
+.graphic-attribution a {
+    color: white;
+}
+
+.socialbuttons-component {
+	position: relative;
+    text-align: right;
+}
+.about-section {
+	font-size: 0.8em;
+	a {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	p {
+		margin: 0px;
+	}
+	@media all and (max-width: @device-width-medium) {
+		text-align: center;
+	}
+}
+.about-credit {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.navigation {
+	img.navigation-logo {
+		content: url("@{navigation-logo}");
+		float: left;
+		height: @nav-logo-height;
+		padding-top: @nav-logo-padding-top;
+		padding-left: @nav-logo-padding-left;
+		@media all and (max-width: @device-width-small) {
+			height: @nav-logo-height-mobile;
+			padding-top: @nav-logo-padding-top-mobile;
+			padding-left: @nav-logo-padding-left-mobile;
+		}
+	}
+}
+
+.article:not(.invert-even) {
+	@invert: odd;
+	&.color-one { .setColour(@color-one,@color-one-inverted,@invert); }
+	&.color-two { .setColour(@color-two,@color-two-inverted,@invert); }
+	&.color-three { .setColour(@color-three,@color-three-inverted,@invert); }
+	&.color-four { .setColour(@color-four,@color-four-inverted,@invert); }
+	&.color-five { .setColour(@color-five,@color-five-inverted,@invert); }
+	&.color-six { .setColour(@color-six,@color-six-inverted,@invert); }
+	&.color-seven { .setColour(@color-seven,@color-seven-inverted,@invert); }
+	&.color-eight { .setColour(@color-eight,@color-eight-inverted,@invert); }
+	&.color-nine { .setColour(@color-nine,@color-nine-inverted,@invert); }
+	&.color-ten { .setColour(@color-ten,@color-ten-inverted,@invert); }
+}
+.article {
+	&.invert-even {
+		@invert: even;
+		&.color-one { .setColour(@color-one,@color-one-inverted,@invert); }
+		&.color-two { .setColour(@color-two,@color-two-inverted,@invert); }
+		&.color-three { .setColour(@color-three,@color-three-inverted,@invert); }
+		&.color-four { .setColour(@color-four,@color-four-inverted,@invert); }
+		&.color-five { .setColour(@color-five,@color-five-inverted,@invert); }
+		&.color-six { .setColour(@color-six,@color-six-inverted,@invert); }
+		&.color-seven { .setColour(@color-seven,@color-seven-inverted,@invert); }
+		&.color-eight { .setColour(@color-eight,@color-eight-inverted,@invert); }
+		&.color-nine { .setColour(@color-nine,@color-nine-inverted,@invert); }
+		&.color-ten { .setColour(@color-ten,@color-ten-inverted,@invert); }
+	}
+}
+.setColour(@color,@color-inverted,@invert) {
+	.block {
+		.setNormal(@color,@color-inverted);
+		&.color-one { .setNormal(@color-one,@color-one-inverted); }
+		&.color-two { .setNormal(@color-two,@color-two-inverted); }
+		&.color-three { .setNormal(@color-three,@color-three-inverted); }
+		&.color-four { .setNormal(@color-four,@color-four-inverted); }
+		&.color-five { .setNormal(@color-five,@color-five-inverted); }
+		&.color-six { .setNormal(@color-six,@color-six-inverted); }
+		&.color-seven { .setNormal(@color-seven,@color-seven-inverted); }
+		&.color-eight { .setNormal(@color-eight,@color-eight-inverted); }
+		&.color-nine { .setNormal(@color-nine,@color-nine-inverted); }
+		&.color-ten { .setNormal(@color-ten,@color-ten-inverted); }	
+		&.inverted {
+			.setInverted(@color,@color-inverted);
+			&.color-one { .setInverted(@color-one,@color-one-inverted); }
+			&.color-two { .setInverted(@color-two,@color-two-inverted); }
+			&.color-three { .setInverted(@color-three,@color-three-inverted); }
+			&.color-four { .setInverted(@color-four,@color-four-inverted); }
+			&.color-five { .setInverted(@color-five,@color-five-inverted); }
+			&.color-six { .setInverted(@color-six,@color-six-inverted); }
+			&.color-seven { .setInverted(@color-seven,@color-seven-inverted); }
+			&.color-eight { .setInverted(@color-eight,@color-eight-inverted); }
+			&.color-nine { .setInverted(@color-nine,@color-nine-inverted); }
+			&.color-ten { .setInverted(@color-ten,@color-ten-inverted); }	
+		}
+	}
+	.block:nth-child(@{invert}):not(.notinverted) {
+		.setInverted(@color,@color-inverted);
+	}
+}
+.block {
+	&.color-one { .setNormal(@color-one,@color-one-inverted); }
+	&.color-two { .setNormal(@color-two,@color-two-inverted); }
+	&.color-three { .setNormal(@color-three,@color-three-inverted); }
+	&.color-four { .setNormal(@color-four,@color-four-inverted); }
+	&.color-five { .setNormal(@color-five,@color-five-inverted); }
+	&.color-six { .setNormal(@color-six,@color-six-inverted); }
+	&.color-seven { .setNormal(@color-seven,@color-seven-inverted); }
+	&.color-eight { .setNormal(@color-eight,@color-eight-inverted); }
+	&.color-nine { .setNormal(@color-nine,@color-nine-inverted); }
+	&.color-ten { .setNormal(@color-ten,@color-ten-inverted); }	
+	&.inverted {
+		&.color-one { .setInverted(@color-one,@color-one-inverted); }
+		&.color-two { .setInverted(@color-two,@color-two-inverted); }
+		&.color-three { .setInverted(@color-three,@color-three-inverted); }
+		&.color-four { .setInverted(@color-four,@color-four-inverted); }
+		&.color-five { .setInverted(@color-five,@color-five-inverted); }
+		&.color-six { .setInverted(@color-six,@color-six-inverted); }
+		&.color-seven { .setInverted(@color-seven,@color-seven-inverted); }
+		&.color-eight { .setInverted(@color-eight,@color-eight-inverted); }
+		&.color-nine { .setInverted(@color-nine,@color-nine-inverted); }
+		&.color-ten { .setInverted(@color-ten,@color-ten-inverted); }	
+	}
+}
+.setNormal(@color,@color-inverted) {
+	background-color: @color-inverted;
+	@heading-color: @greyDark;
+	@heading-color-inverted: @white;
+	.button {
+		background-color: @color;
+		color: @color-inverted;
+		text-decoration: none;
+	}
+	a {
+		&.button {
+			color: @color-inverted;
+		}
+	}
+	.narrative-component {
+		.narrative-slider-graphic img {
+			background-color: @color;
+		}
+	}
+	.graphic-component {
+		&.matchblock {
+			.graphic-inner img {
+				background-color: @color;
+			}
+		}
+	}
+	.accordion__item-btn {
+		border-radius: 0px;
+		background-color: @color;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@color, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@color, 20%);
+			}
+		}
+	}
+	.accordion__item-content {
+		border-radius: 0px;
+		background-color: @color-inverted;
+		color: @color;
+	}
+	.accordion__item-btn:hover {
+		background-color: darken(@color, 20%);
+	}
+	.accordion__item {
+		border: 3px solid @color;
+	}
+	.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
+		background-color: @color;
+	}
+	.narrative-component {
+		&.matchblock {
+			.narrative-slider-graphic img {
+				background-color: @color;
+			}
+		}
+	}
+	.mcq-component .mcq-item label {
+		background-color: @color;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@color, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@color, 20%);
+			}
+		}
+	}
+	.mcq-component .incorrect label {
+		background-color: darken(@color, 20%);
+	}
+	.mcq-widget.disabled .mcq-item label.selected.disabled {
+		background-color: @color;
+	}
+	.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
+		color: black;
+	}
+}
+	
+.setInverted(@color,@color-inverted) {
+	background-color: @color;
+	color: @color-inverted;
+	h1,h2,h3,h4,h5,a, a:hover, a:visited {
+		color: @color-inverted;
+	}
+	.button {
+		background-color: @color-inverted;
+		color: @color;
+		text-decoration: none;
+	}
+	a {
+		&.button {
+			color: @color;
+		}
+	}
+	.block-title {
+		color: @color-inverted;
+	}
+    .component-title {
+		color: @color-inverted;
+	}
+	.accordian-item-title {
+		background-color: @mid-grey;
+	}
+	.gmcq-component .gmcq-item-inner, .gmcq-component .gmcq-item, .gmcq-component .gmcq-item label .gmcq-answer-icon, .gmcq-component .gmcq-item label.selected .gmcq-item-inner {
+		color: @color-inverted;
+	}
+	.accordian-item-title {
+		background-color: @mid-grey;
+	}
+	.narrative-component .narrative-progress {
+		background-color: @color-inverted;
+		border: 1px solid @color-inverted;
+	}
+	.accordion__item-btn {
+		background-color: @color-inverted;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@color-inverted, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@color-inverted, 20%);
+			}
+		}
+	}
+	.accordion__item-btn:hover {
+		background-color: darken(@color-inverted, 20%);
+	}
+	.accordion__item-body {
+		border: 3px solid @color-inverted;
+		color: @color-inverted;
+	}
+	.mcq-component .mcq-item, .mcq-component .mcq-item label {
+		background-color: @color-inverted;
+		.no-touch & {
+			&:hover {
+				background-color: darken(@color-inverted, 20%);
+			}
+			&.visited:hover {
+				background-color: darken(@color-inverted, 20%);
+			}
+		}
+	}
+	.mcq-component .mcq-item:hover {
+		background-color: darken(@color-inverted, 20%);
+	}
+	.mcq-component .incorrect label {
+		background-color: darken(@color-inverted, 20%);
+	}
+	.mcq-widget.disabled .mcq-item label.selected.disabled {
+		background-color: @color-inverted;
+	}
+	.narrative-component .narrative-progress.selected {
+		background-color: @color;
+	}
+	.accordion-item-title-icon, .accordion-item-title {
+		color: @color;
+	}
+	.accordion__item-body {
+		background-color: @color;
+	}
+	.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
+		color: @color;
+	}
+	.mcq-answer-icon.checkbox {
+		border: 3px solid @color;
+	}
+}
+
+.block {
+        &.hidden {
+		display: none;
+	}
+	.text-component {
+		&.ticks ul li {
+    	    list-style-type: none;
+	        margin-left: 28px;
+        	white-space: pre-wrap;
+        	&:before {
+            	content: "✔";
+            	margin: 0 14px 0 -28px;
+    		}
+		}
+	}
+	.narrative-component {
+		.narrative-content-item a {
+			color: white;
+		}
+		.narrative-slider-graphic img {
+			background-color: white;
+		}
+		&.white {
+			.narrative-slider-graphic img {
+				background-color: white;
+			}
+		}
+	}
+	.graphic-component {
+		&.intro-logo {
+			.graphic-widget {
+				text-align: center;
+			}
+			.graphic-inner img {
+				content: url("@{theme-logo}");
+				max-height: 200px;
+			}
+			.graphic-attribution {
+				display: none;
+			}
+		}
+		&.clipboard {
+			.graphic-widget {
+				text-align: center;
+			}
+			.graphic-inner img {
+				max-height: 290px;
+			}
+		}
+		&.white {
+			.graphic-inner img {
+				background-color: white;
+			}
+		}
+	}
+}
+.divider-block {
+	background-color: @background-color-inverted;
+	color: @foreground-color-inverted;
+	text-align: center;
+	.block-title,
+	.block-body,
+	.block-instruction,
+	.component-title,
+	.component-body,
+	.component-instruction {
+		color: @foreground-color-inverted;
+		text-align: center;
+	}
+	.component-inner {
+		background-color: transparent;
+	}
+}
