@@ -47,11 +47,19 @@ body {
 .footer {
 	background-color: @footer;
 	color:@footer-inverted;
-	.block__inner {
-		padding-top: 1rem;
-	}
 	.graphic__attribution {
 		display: none;
+	}
+	.graphic {
+		&__inner {
+			text-align: center;
+			img {
+				max-width: 75%;
+				min-width: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
 	}
 	.footer-logo {
 		text-align: left;
@@ -69,6 +77,20 @@ body {
 			display: inline-block;
 		}
 	}
+}
+.min-width-auto img {
+	min-width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.pagelevelprogress {
+	&__indicator {
+		width: 7rem;
+	}
+	&__indicator-inner {
+		height: 0.5rem;
+	}
+
 }
 
 .about-credit p {
@@ -224,9 +246,22 @@ a {
 			color: @color-inverted;
 		}
 	}
-	.narrative-component {
-		.narrative-slider-graphic img {
+	.narrative {
+		&__content {
 			background-color: @color;
+			padding: 1rem;
+			color: @white;
+		}
+		&__controls {
+			background-color: @color;
+			color: @color-inverted;
+		}
+		&__progress {
+			border: 1px solid @color;
+			background-color: @color;
+		} 
+		.is-selected {
+			background-color: @color-inverted;		
 		}
 	}
 	.graphic-component {
@@ -236,58 +271,52 @@ a {
 			}
 		}
 	}
-	.accordion__item-btn {
-		border-radius: 0px;
-		background-color: @color;
-		.no-touch & {
-			&:hover {
-				background-color: darken(@color, 20%);
-			}
-			&.visited:hover {
-				background-color: darken(@color, 20%);
+	.accordion {
+		&__item {
+			border: 3px solid @color;
+		}
+		&__item-btn {
+			border-radius: 0px;
+			background-color: @color;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color, 20%);
+				}
 			}
 		}
+		&__item-content {
+			border-radius: 0px;
+			background-color: @color-inverted;
+			color: @font-color;
+		}
+		&__item-btn:hover {
+			background-color: darken(@color, 20%);
+		}
 	}
-	.accordion__item-content {
-		border-radius: 0px;
-		background-color: @color-inverted;
-		color: @color;
-	}
-	.accordion__item-btn:hover {
-		background-color: darken(@color, 20%);
-	}
-	.accordion__item {
-		border: 3px solid @color;
-	}
-	.narrative-component .narrative-progress.selected, .narrative-component .narrative-strapline-title {
-		background-color: @color;
-	}
-	.narrative-component {
-		&.matchblock {
-			.narrative-slider-graphic img {
+	.mcq {
+		&__item {
+			label {
+				background-color: @color;
+				border-radius: 0px;
+				.no-touch & {
+					&:hover {
+						background-color: darken(@color, 20%);
+					}
+					&.visited:hover {
+						background-color: darken(@color, 20%);
+					}
+				}
+			}
+			.is-disabled {
 				background-color: @color;
 			}
-		}
-	}
-	.mcq-component .mcq-item label {
-		background-color: @color;
-		.no-touch & {
-			&:hover {
-				background-color: darken(@color, 20%);
-			}
-			&.visited:hover {
-				background-color: darken(@color, 20%);
+			.is-selected {
+				background-color: darken(@color, 20%);	
 			}
 		}
-	}
-	.mcq-component .incorrect label {
-		background-color: darken(@color, 20%);
-	}
-	.mcq-widget.disabled .mcq-item label.selected.disabled {
-		background-color: @color;
-	}
-	.mcq-widget.disabled .mcq-item label.disabled .mcq-item-icon.mcq-incorrect-icon {
-		color: black;
 	}
 }
 	
@@ -313,76 +342,78 @@ a {
     .component-title {
 		color: @color-inverted;
 	}
-	.accordian-item-title {
-		background-color: @mid-grey;
-	}
 	.gmcq-component .gmcq-item-inner, .gmcq-component .gmcq-item, .gmcq-component .gmcq-item label .gmcq-answer-icon, .gmcq-component .gmcq-item label.selected .gmcq-item-inner {
 		color: @color-inverted;
 	}
-	.accordian-item-title {
-		background-color: @mid-grey;
-	}
-	.narrative-component .narrative-progress {
-		background-color: @color-inverted;
-		border: 1px solid @color-inverted;
-	}
-	.accordion__item-btn {
-		background-color: @color-inverted;
-		.no-touch & {
-			&:hover {
-				background-color: darken(@color-inverted, 20%);
-			}
-			&.visited:hover {
-				background-color: darken(@color-inverted, 20%);
-			}
+	.narrative {
+		&__content {
+			background-color: @greyDark;
+			padding: 1rem;
+		}
+		&__controls {
+			background-color: @greyDark;
+			color: @color-inverted;
+		}
+		&__progress {
+			border: 1px solid @color-inverted;
+			background-color: @color-inverted;
+		} 
+		.is-selected {
+			background-color: @color;		
 		}
 	}
-	.accordion__item-btn:hover {
-		background-color: darken(@color-inverted, 20%);
-	}
-	.accordion__item-body {
-		border: 3px solid @color-inverted;
-		color: @color-inverted;
-	}
-	.mcq-component .mcq-item, .mcq-component .mcq-item label {
-		background-color: @color-inverted;
-		.no-touch & {
-			&:hover {
-				background-color: darken(@color-inverted, 20%);
-			}
-			&.visited:hover {
-				background-color: darken(@color-inverted, 20%);
+	.accordion {
+		&__item {
+			border: 3px solid @color-inverted;
+		}
+		&__item-btn {
+			border-radius: 0px;
+			background-color: @color-inverted;
+			color: @color;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color, 20%);
+				}
 			}
 		}
+		&__item-content {
+			border-radius: 0px;
+			background-color: @color;
+			color: @color-inverted;
+		}
+		&__item-btn:hover {
+			background-color: darken(@color-inverted, 20%);
+		}	
 	}
-	.mcq-component .mcq-item:hover {
-		background-color: darken(@color-inverted, 20%);
-	}
-	.mcq-component .incorrect label {
-		background-color: darken(@color-inverted, 20%);
-	}
-	.mcq-widget.disabled .mcq-item label.selected.disabled {
-		background-color: @color-inverted;
-	}
-	.narrative-component .narrative-progress.selected {
-		background-color: @color;
-	}
-	.accordion-item-title-icon, .accordion-item-title {
-		color: @color;
-	}
-	.accordion__item-body {
-		background-color: @color;
-	}
-	.mcq-component .mcq-item label, .mcq-component .mcq-item label.selected .mcq-item-icon, .mcq-component .mcq-item label .mcq-answer-icon {
-		color: @color;
-	}
-	.mcq-answer-icon.checkbox {
-		border: 3px solid @color;
+	.mcq {
+		&__item {
+			label {
+				background-color: @color-inverted;
+				color: @color;
+				.no-touch & {
+					&:hover {
+						background-color: darken(@color-inverted, 20%);
+					}
+					&.visited:hover {
+						background-color: darken(@color-inverted, 20%);
+					}
+				}
+			}
+			.is-disabled {
+				background-color: darken(@color-inverted, 20%);
+			}
+			.is-selected {
+				background-color: @color-inverted;
+			}
+		}
 	}
 }
 
 .block {
-        &.hidden {
+    &.hidden {
 		display: none;
 	}
 	.text-component {
