@@ -10,14 +10,6 @@
         "required": false,
         "title": "Global",
         "properties": {
-         "theme-logo": {
-            "title": "First block logo",
-            "help": "This is the first block logo, it gets applied to any graphic component with class intro-logo",
-            "type": "string",
-            "inputType": "Asset:image",
-            "default": "",
-            "validators": []
-         },
          "max-width": {
             "title": "Max width",
             "help": "The maximum width of the page",
@@ -109,6 +101,35 @@
             "default": "",
             "help": "Global link font colour when hovered over inverted. Either a lightened/darkened alternative to Link hover colour."
           }
+        }
+      },
+      "_themeLogo": {
+        "type": "object",
+        "required": false,
+        "title": "Theme logo",
+        "properties": {
+         "theme-logo": {
+            "title": "First block logo",
+            "help": "This is the first block logo, it gets applied to any graphic component with class intro-logo",
+            "type": "string",
+            "inputType": "Asset:image",
+            "default": "",
+            "validators": []
+         },
+         "theme-logo-top-padding": {
+            "title": "Padding above the theme logo",
+            "help": "Often used to shunt the theme logo down to provide padding in respect to a component title",
+            "type": "string",
+            "inputType": "Text",
+            "default": "0rem"
+         },
+         "theme-logo-width": {
+            "title": "Width of the theme logo",
+            "help": "Often used to shunt the theme logo around to provide padding in respect to component text",
+            "type": "string",
+            "inputType": "Text",
+            "default": "100%"
+         }
         }
       },
       "_colors": {
@@ -515,14 +536,14 @@
             "title": "Nav colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "#000000",
             "help": "Navigation background colour"
           },
           "nav-inverted": {
             "title": "Nav colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#9096A0",
+            "default": "#ffffff",
             "help": "Navigation foreground colour"
           },
           "hide-nav": {
@@ -536,28 +557,28 @@
             "title": "Nav icon colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#000000",
             "help": "Navigation icon background colour"
           },
           "nav-icon-inverted": {
             "title": "Nav icon colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#ffffff",
             "help": "Navigation icon foreground colour"
           },
           "nav-icon-hover": {
             "title": "Nav icon colour - hover",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#000000",
             "help": "Navigation icon background colour when hovered over"
           },
           "nav-icon-inverted-hover": {
             "title": "Nav icon colour - inverted hover",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "",
+            "default": "#ffffff",
             "help": "Navigation icon foreground colour when hovered over"
           },
           "navigation-logo": {
@@ -664,14 +685,14 @@
             "title": "Footer colour",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#FFFFFF",
+            "default": "#000000",
             "help": "Footer background colour"
           },
           "footer-inverted": {
             "title": "Footer colour - inverted",
             "type": "string",
             "inputType": "ColourPicker",
-            "default": "#9096A0",
+            "default": "#ffffff",
             "help": "Footer foreground colour"
           },
           "footer-logo": {

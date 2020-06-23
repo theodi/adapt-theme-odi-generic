@@ -266,7 +266,7 @@ a {
 	}
 	.graphic-component {
 		&.matchblock {
-			.graphic-inner img {
+			.graphic__inner img {
 				background-color: @color;
 			}
 		}
@@ -318,6 +318,12 @@ a {
 			}
 		}
 	}
+	.hotgraphic {
+		&__pin:not(has-pin-image) {
+			background-color: @color;
+			color: @color-inverted;
+		}
+	}
 }
 	
 .setInverted(@color,@color-inverted) {
@@ -342,7 +348,7 @@ a {
     .component-title {
 		color: @color-inverted;
 	}
-	.gmcq-component .gmcq-item-inner, .gmcq-component .gmcq-item, .gmcq-component .gmcq-item label .gmcq-answer-icon, .gmcq-component .gmcq-item label.selected .gmcq-item-inner {
+	.gmcq .gmcq__item-inner, .gmcq .gmcq__item, .gmcq .gmcq__item label .gmcq__answer-icon, .gmcq .gmcq__item label.selected .gmcq__item-inner {
 		color: @color-inverted;
 	}
 	.narrative {
@@ -408,6 +414,12 @@ a {
 			.is-selected {
 				background-color: @color-inverted;
 			}
+		}
+	}
+	.hotgraphic {
+		&__pin:not(has-pin-image) {
+			background-color: @color-inverted;
+			color: @color;
 		}
 	}
 }
