@@ -38,6 +38,7 @@ define([
     },
 
     setBackgroundImage: function() {
+      
       var backgroundImages = this.model.get("_backgroundImage");
 
       if (!backgroundImages) return;
