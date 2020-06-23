@@ -416,7 +416,7 @@ a {
     &.hidden {
 		display: none;
 	}
-	.text-component {
+	.text {
 		&.ticks ul li {
     	    list-style-type: none;
 	        margin-left: 28px;
@@ -427,42 +427,33 @@ a {
     		}
 		}
 	}
-	.narrative-component {
-		.narrative-content-item a {
-			color: white;
-		}
-		.narrative-slider-graphic img {
-			background-color: white;
-		}
-		&.white {
-			.narrative-slider-graphic img {
-				background-color: white;
-			}
-		}
-	}
-	.graphic-component {
+	.graphic {
 		&.intro-logo {
-			.graphic-widget {
+			.graphic__widget {
 				text-align: center;
 			}
-			.graphic-inner img {
+			.graphic__inner img {
 				content: url("@{theme-logo}");
-				max-height: 200px;
+				padding-top: @theme-logo-top-padding;
+    			min-width: @theme-logo-width;
+    			max-width: @theme-logo-width;
+    			margin-left: auto;
+    			margin-right: auto;
 			}
-			.graphic-attribution {
+			.graphic__attribution {
 				display: none;
 			}
 		}
 		&.clipboard {
-			.graphic-widget {
+			.graphic__widget {
 				text-align: center;
 			}
-			.graphic-inner img {
+			.graphic__inner img {
 				max-height: 290px;
 			}
 		}
 		&.white {
-			.graphic-inner img {
+			.graphic__inner img {
 				background-color: white;
 			}
 		}

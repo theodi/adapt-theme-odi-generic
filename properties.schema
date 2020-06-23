@@ -10,6 +10,14 @@
         "required": false,
         "title": "Global",
         "properties": {
+         "theme-logo": {
+            "title": "First block logo",
+            "help": "This is the first block logo, it gets applied to any graphic component with class intro-logo",
+            "type": "string",
+            "inputType": "Asset:image",
+            "default": "",
+            "validators": []
+         },
          "max-width": {
             "title": "Max width",
             "help": "The maximum width of the page",
@@ -100,49 +108,55 @@
             "inputType": "ColourPicker",
             "default": "",
             "help": "Global link font colour when hovered over inverted. Either a lightened/darkened alternative to Link hover colour."
-          },
-          "heading-color": {
-            "title": "Heading colour",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": "#36CDE8",
-            "help": "Global title colour"
-          },
-          "heading-color-inverted": {
-            "title": "Heading colour inverted",
-            "type": "string",
-            "inputType": "ColourPicker",
-            "default": "#FFFFFF",
-            "help": "Global title colour inverted. Either a lightened/darkened alternative to Title colour."
           }
         }
       },
-
       "_colors": {
         "type": "object",
         "required": false,
         "title": "Colours",
         "properties": {
           "color-one": {
-            "title": "Colour one (Primary colour)",
+            "title": "Colour one",
             "help": "This is the primary colour used to style the course, and is applied to component items and pop-up notifications.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#3099FF"
           },
+          "color-one-inverted": {
+            "title": "Colour one inverted",
+            "help": "Inverted color one, used for components (e.g. buttons) that sit on top of something shaded in colour one",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
           "color-two": {
-            "title": "Colour two (Secondary colour)",
+            "title": "Colour two",
             "help": "This is the secondary colour used to style the course, and is typically applied to buttons.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#666666"
           },
+          "color-two-inverted": {
+            "title": "Colour two inverted",
+            "help": "Inverted color two, used for components (e.g. buttons) that sit on top of something shaded in colour two",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
+          },
           "color-three": {
-            "title": "Colour three (Tertiary colour)",
+            "title": "Colour three",
             "help": "This is the tertiary colour used to style the course.",
             "type": "string",
             "inputType": "ColourPicker",
             "default": "#7d82be"
+          },
+          "color-three-inverted": {
+            "title": "Colour three inverted",
+            "help": "Inverted color three, used for components (e.g. buttons) that sit on top of something shaded in colour three",
+            "type": "string",
+            "inputType": "ColourPicker",
+            "default": "#ffffff"
           },
           "color-four": {
             "title": "Colour four",
