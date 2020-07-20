@@ -372,6 +372,17 @@ a {
 			}
 		}
 	}
+	.matching {
+		.dropdown__btn {
+			background-color: @color;
+			color: @color-inverted;	
+		}
+		.dropdown__item {
+			background-color: @color-inverted;
+			color: @font-color;
+			border-bottom: 1px solid @color;
+		}
+	}
 	.hotgraphic {
 		&__pin:not(has-pin-image) {
 			background-color: @color;
@@ -473,6 +484,17 @@ a {
 			.is-selected {
 				background-color: @color-inverted;
 			}
+		}
+	}
+	.matching {
+		.dropdown__btn {
+			background-color: @color-inverted;
+			color: @color;	
+		}
+		.dropdown__item {
+			background-color: @color;
+			color: @color-inverted;
+			border-bottom: 1px solid @color-inverted;
 		}
 	}
 	.hotgraphic {
