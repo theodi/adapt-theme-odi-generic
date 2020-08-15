@@ -15,6 +15,10 @@ body {
 	line-height: 27px;
 }
 
+b, strong {
+	font-weight: bold;
+}
+
 #wrapper {
 	margin-left: auto;
 	margin-right: auto;
@@ -142,7 +146,6 @@ blockquote {
     padding-bottom: 0.2rem;
 }
 
-
 .component__attribution {
     height:0px;
     -webkit-transition:height, 0.5s linear;
@@ -151,9 +154,14 @@ blockquote {
     -o-transition: height, 0.5s linear;
     transition: height, 0.5s linear;
 }
+
 a {
 	color: inherit;
+	&.button {
+		padding: 1rem;
+	}
 }
+
 .graphic__attribution a {
     color: white;
 }
@@ -161,6 +169,14 @@ a {
 .socialbuttons-component {
 	position: relative;
     text-align: right;
+}
+#social-icons {
+	.social {
+		img {
+			min-width: 0%;
+			display: inline-block;
+		}
+	}
 }
 .about-section {
 	font-size: 0.8em;
@@ -278,11 +294,24 @@ a {
 		&.color-ten { .setInverted(@color-ten,@color-ten-inverted); }	
 	}
 }
+.graphic {
+	&.color-one { img { background-color: @color-one; } }
+	&.color-two { img { background-color: @color-two; } }
+	&.color-three { img { background-color: @color-three; } }
+	&.color-four { img { background-color: @color-four; } }
+	&.color-five { img { background-color: @color-five; } }
+	&.color-six { img { background-color: @color-six; } }
+	&.color-seven { img { background-color: @color-seven; } }
+	&.color-eight { img { background-color: @color-eight; } }
+	&.color-nine { img { background-color: @color-nine; } }
+	&.color-ten { img { background-color: @color-ten; } }
+}
 .setNormal(@color,@color-inverted) {
 	background-color: @color-inverted;
 	@heading-color: @greyDark;
 	@heading-color-inverted: @white;
 	.button {
+		padding: 1rem;
 		background-color: @color;
 		color: @color-inverted;
 		text-decoration: none;
@@ -365,6 +394,7 @@ a {
 				}
 			}
 			.is-disabled {
+				color: @color-inverted;
 				background-color: @color;
 			}
 			.is-selected {
@@ -384,7 +414,7 @@ a {
 		}
 	}
 	.hotgraphic {
-		&__pin:not(has-pin-image) {
+		&__pin:not(.has-pin-image) {
 			background-color: @color;
 			color: @color-inverted;
 		}
@@ -398,6 +428,7 @@ a {
 		color: @color-inverted;
 	}
 	.button {
+		padding: 1rem;
 		background-color: @color-inverted;
 		color: @color;
 		text-decoration: none;
@@ -445,13 +476,13 @@ a {
 		&__item-btn {
 			border-radius: 0px;
 			background-color: @color-inverted;
-			color: @color;
+			color: darken(@color,10%);
 			.no-touch & {
 				&:hover {
-					background-color: darken(@color, 20%);
+					background-color: darken(@color-inverted, 20%);
 				}
 				&.visited:hover {
-					background-color: darken(@color, 20%);
+					background-color: darken(@color-inverted, 20%);
 				}
 			}
 		}
@@ -468,7 +499,7 @@ a {
 		&__item {
 			label {
 				background-color: @color-inverted;
-				color: @color;
+				color: darken(@color,10%);
 				.no-touch & {
 					&:hover {
 						background-color: darken(@color-inverted, 20%);
@@ -498,13 +529,18 @@ a {
 		}
 	}
 	.hotgraphic {
-		&__pin:not(has-pin-image) {
+		&__pin:not(.has-pin-image) {
 			background-color: @color-inverted;
 			color: @color;
 		}
 	}
 }
-
+.hotgraphic {
+	.spectrum-marker {
+		width: 64px;
+		background-color: transparent;
+	}
+}
 .hotgraphic-popup {
 	&__item-image {
 		margin-left: auto;
@@ -534,6 +570,11 @@ a {
 		}
 	}
 	.graphic {
+		&.mobile-hide {
+			@media all and (max-width: @device-width-small) {
+				display: none;
+			}
+		}
 		&.intro-logo {
 			.graphic__widget {
 				text-align: center;
@@ -580,7 +621,16 @@ a {
 		margin: 0rem 1rem;
 	}
 }
-
+.section-banner {
+	.block__inner {
+		padding: 2rem;
+	}
+	img {
+		min-width: 0px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 .divider-block {
 	background-color: @background-color-inverted;
 	color: @foreground-color-inverted;
