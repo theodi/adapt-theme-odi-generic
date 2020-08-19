@@ -159,6 +159,8 @@ a {
 	color: inherit;
 	&.button {
 		padding: 1rem;
+		text-decoration: underline;
+		display: inline-block;
 	}
 }
 
@@ -314,7 +316,6 @@ a {
 		padding: 1rem;
 		background-color: @color;
 		color: @color-inverted;
-		text-decoration: none;
 	}
 	a {
 		&.button {
@@ -431,7 +432,6 @@ a {
 		padding: 1rem;
 		background-color: @color-inverted;
 		color: @color;
-		text-decoration: none;
 	}
 	a {
 		&.button {
@@ -615,6 +615,9 @@ a {
 			padding-bottom: 2rem;
 		}
 	}
+}
+.component__body a, .component__instruction a {
+	color: inherit;
 }
 .boxmenu__item-container-inner {
 	@media all and (max-width: @device-width-medium) {
