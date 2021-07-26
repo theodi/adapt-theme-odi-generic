@@ -1,8 +1,8 @@
 {
     "name": "adapt-theme-odi-generic",
     "repository": "git@github.com:theodi/adapt-theme-odi-generic.git",
-    "framework": "^2.0.0",
-    "version": "0.8.5",
+    "framework": ">=5.2",
+    "version": "0.9.22",
     "homepage": "https://github.com/theodi/adapt-theme-odi-generic/",
     "issues": "https://github.com/theodi/adapt-theme-odi-generic/issues",
     "displayName": "ODI Generic",
@@ -13,12 +13,13 @@
         "adapt-plugin",
         "adapt-theme"
     ],
-    "licenfco": "GPLv3",
+    "licenfco": "GPL-3.0",
     "ignore": [
         "**/.*",
         "node_modules",
         "bower_components",
         "test",
         "tests"
-    ]
+    ],
+    "targetAttribute": "_odi-generic"
 }
