@@ -412,7 +412,7 @@ a {
 			label {
 				background-color: @color;
 				border-radius: 0px;
-				.no-touch & {
+				.no-touch & not(.is-disabled) {
 					&:hover {
 						background-color: darken(@color, 20%);
 					}
@@ -423,10 +423,10 @@ a {
 			}
 			.is-disabled {
 				color: @color-inverted;
-				background-color: @color;
+				background-color: darken(@color, 20%);
 			}
 			.is-selected {
-				background-color: darken(@color, 20%);	
+				background-color: @color;	
 			}
 		}
 	}
@@ -527,7 +527,7 @@ a {
 			label {
 				background-color: @color-inverted;
 				color: darken(@color,10%);
-				.no-touch & {
+				.no-touch & not(.is-disabled) {
 					&:hover {
 						background-color: darken(@color-inverted, 20%);
 					}
