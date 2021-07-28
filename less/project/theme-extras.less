@@ -55,6 +55,8 @@ b, strong {
 .nav  {
 	margin-left: auto;
 	margin-right: auto;
+	left: 0;
+	right: 0;
 	max-width: @max-width;
 	position: sticky;
 	height: @nav-logo-height;
@@ -90,6 +92,11 @@ b, strong {
 	color: @font-color;
 }
 .page {
+	//IE 11 hack
+	@media all and (-ms-high-contrast:none) {
+		padding-top: 4rem; 
+	}
+	//End Hack
 	&__title {
 		color: @font-color;
 	}
@@ -100,7 +107,7 @@ b, strong {
 
 .footer {
 	background-color: @footer;
-	color:@footer-inverted;
+	color:@footer-inverted;s
 	.graphic__attribution {
 		display: none;
 	}
