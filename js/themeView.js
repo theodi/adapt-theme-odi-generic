@@ -1,5 +1,5 @@
 define([
-  "core/js/adapt"
+  'core/js/adapt'
 ], function(Adapt) {
 
   var ThemeView = Backbone.View.extend({
@@ -10,8 +10,8 @@ define([
       this.setStyles();
 
       this.listenTo(Adapt, {
-        "device:changed": this.onDeviceResize,
-        "remove": this.remove
+        'device:changed': this.onDeviceResize,
+        'remove': this.remove
       });
     },
 
@@ -30,6 +30,7 @@ define([
       this.setBackgroundImage();
       this.setBackgroundStyles();
       this.setMinimumHeight();
+      this.setResponsiveClasses();
       this.setCustomStyles();
     },
 
@@ -38,18 +39,17 @@ define([
     },
 
     setBackgroundImage: function() {
-      
-      var backgroundImages = this.model.get("_backgroundImage");
+      var backgroundImages = this.model.get('_backgroundImage');
 
       if (!backgroundImages) return;
 
       var backgroundImage;
 
       switch (Adapt.device.screenSize) {
-        case "large":
+        case 'large':
           backgroundImage = backgroundImages._large;
           break;
-        case "medium":
+        case 'medium':
           backgroundImage = backgroundImages._medium;
           break;
         default:
@@ -58,17 +58,17 @@ define([
 
       if (backgroundImage) {
         this.$el
-          .addClass("has-bg-image")
-          .css("background-image", "url(" + backgroundImage + ")");
+          .addClass('has-bg-image')
+          .css('background-image', 'url(' + backgroundImage + ')');
       } else {
         this.$el
-          .removeClass("has-bg-image")
-          .css("background-image", "");
+          .removeClass('has-bg-image')
+          .css('background-image', '');
       }
     },
 
     setBackgroundStyles: function () {
-      var styles = this.model.get("_backgroundStyles");
+      var styles = this.model.get('_backgroundStyles');
 
       if (!styles) return;
 
@@ -80,17 +80,17 @@ define([
     },
 
     setMinimumHeight: function() {
-      var minimumHeights = this.model.get("_minimumHeights");
+      var minimumHeights = this.model.get('_minimumHeights');
 
       if (!minimumHeights) return;
 
       var minimumHeight;
 
       switch (Adapt.device.screenSize) {
-        case "large":
+        case 'large':
           minimumHeight = minimumHeights._large;
           break;
-        case "medium":
+        case 'medium':
           minimumHeight = minimumHeights._medium;
           break;
         default:
@@ -99,13 +99,22 @@ define([
 
       if (minimumHeight) {
         this.$el
-          .addClass("has-min-height")
-          .css("min-height", minimumHeight + "px");
+          .addClass('has-min-height')
+          .css('min-height', minimumHeight + 'px');
       } else {
         this.$el
-          .removeClass("has-min-height")
-          .css("min-height", "");
+          .removeClass('has-min-height')
+          .css('min-height', '');
       }
+    },
+
+    setResponsiveClasses: function() {
+      const responsiveClasses = this.model.get('_responsiveClasses');
+      if (!responsiveClasses) return;
+
+      this.$el
+        .removeClass(Object.values(responsiveClasses))
+        .addClass(responsiveClasses[`_${Adapt.device.screenSize}`]);
     },
 
     setCustomStyles: function() {},

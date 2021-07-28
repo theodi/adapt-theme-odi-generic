@@ -1,4 +1,3 @@
-// --------------------------------------------------
 // Variables
 // --------------------------------------------------
 @duration: 0.2s;
@@ -6,9 +5,7 @@
 
 @animation-duration: 2000ms;
 @animation-easing: cubic-bezier(.23,1,.32,1);
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Basic image zoom on hover animation
 // Apply to image container
 //
@@ -27,12 +24,9 @@
     }
   }
 }
-// --------------------------------------------------
 
 // --------------------------------------------------
-// --------------------------------------------------
 // _onScreen Animations
-// --------------------------------------------------
 // --------------------------------------------------
 
 // Add an overflow to the animation container to stop horizontal scrolling
@@ -47,14 +41,14 @@
 // --------------------------------------------------
 .fade-in-before > div {
   opacity: 0;
-  transition: all @animation-duration @animation-easing;
+  transition: all @animation-duration @animation-easing, visibility 0s linear 0s;
 }
 
 .fade-in-after > div {
   opacity: 1;
 }
 
-// _onScreen animation mixin for 'fade-in-top', 'fade-in-bottom', 
+// _onScreen animation mixin for 'fade-in-top', 'fade-in-bottom',
 // 'fade-in-left', and 'fade-in-right'
 // --------------------------------------------------
 .on-screen-anim(fade-in-top; 0; 1; translateY(-100px); translateY(0));
@@ -66,7 +60,7 @@
   .@{selector}-before > div {
     opacity: @opacity-before;
     transform: @transform-before;
-    transition: all @animation-duration @animation-easing;
+    transition: all @animation-duration @animation-easing, visibility 0s linear 0s;
   }
 
   .@{selector}-after > div {
@@ -76,9 +70,7 @@
 }
 
 // --------------------------------------------------
-// --------------------------------------------------
 // Keyframe Animations
-// --------------------------------------------------
 // --------------------------------------------------
 
 .keyframes(@name; @args) {
