@@ -25,7 +25,33 @@ b, strong {
 	max-width: @max-width;
 	padding-top: 0px;
 }
-
+.o_page__background {
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.o_page__background:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-linear-gradient(305deg,rgba(var(--backgroundColorRGB),0) 20%,rgba(var(--backgroundColorRGB),.6) 40%,rgba(var(--backgroundColorRGB),1) 80%),-webkit-linear-gradient(270deg,rgba(var(--backgroundColorRGB),0) 20%,rgba(var(--backgroundColorRGB),.6) 40%,rgba(var(--backgroundColorRGB),1) 80%);
+    background: linear-gradient(145deg,rgba(var(--backgroundColorRGB),0) 20%,rgba(var(--backgroundColorRGB),.6) 40%,rgba(var(--backgroundColorRGB),1) 80%),linear-gradient(180deg,rgba(var(--backgroundColorRGB),0) 20%,rgba(var(--backgroundColorRGB),.6) 40%,rgba(var(--backgroundColorRGB),1) 80%);
+}
+.o_page__background-image {
+	min-width: 100vw;
+    max-width: none;
+    width: auto;
+    min-height: 100vh;
+    max-height: none;
+    height: auto;
+    object-fit: cover;
+}
 .nav  {
 	margin-left: auto;
 	margin-right: auto;
@@ -413,6 +439,8 @@ a {
 			background-color: @color-inverted;
 			color: @font-color;
 			border-bottom: 1px solid @color;
+			border-left: 1px solid @color;
+			border-right: 1px solid @color;
 		}
 	}
 	.hotgraphic {
@@ -650,5 +678,24 @@ a {
 	}
 	.component-inner {
 		background-color: transparent;
+	}
+}
+.dragndrop-container {
+	.dragndrop-answers {
+		color: @foreground-color;
+	}
+}
+.dragndrop-widget {
+	.btn__container {
+		display: inline-block;
+		width: 100%;
+	}
+}
+iframe {
+	border: none;
+}
+@media only screen and (max-width: 950px) {
+	.moral-machine iframe {
+		height: 1080px;
 	}
 }
