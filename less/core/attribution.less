@@ -10,10 +10,11 @@
   padding: @item-padding;
   background-color: fade(@background, 50%);
   color: @background-inverted;
-  transform: translate3d(0,0,0);
+  .transform(translate3d(0,0,0));
 }
 
 // Override position: absolute; as it won't work with current GMCQ structure
 .gmcq__attribution {
   position: relative;
+  display: flex;
 }

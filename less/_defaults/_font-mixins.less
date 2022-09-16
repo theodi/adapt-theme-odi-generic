@@ -1,4 +1,3 @@
-// --------------------------------------------------
 // Smooths the font on the pixel level rather than the subpixel.
 // Switching from subpixel rendering to antialiasing for
 // light text on dark backgrounds makes it look lighter.
@@ -7,9 +6,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Globals
 // --------------------------------------------------
 body {
@@ -19,6 +16,14 @@ body {
   font-weight: @body-weight;
   line-height: @body-line-height;
   color: @font-color;
+
+  // Set up a language specific font override.
+  // This will need to be uncommented out, duplicated and updated if there are
+  // more languages that require overriding. All overrides must be duplicated
+  // and added to each of the font mixins below.
+  // html[lang="de"] & {
+  //   font-family: Impact;
+  // }
 }
 
 .instruction-text() {
@@ -26,7 +31,7 @@ body {
   font-size: @instruction-size;
   font-weight: @instruction-weight;
   line-height: @instruction-line-height;
-  font-style: italic;
+  font-style: @instruction-font-style;
 }
 
 .button-text() {
@@ -34,6 +39,7 @@ body {
   font-size: @btn-size;
   font-weight: @btn-weight;
   line-height: @btn-line-height;
+  letter-spacing: @btn-letter-spacing;
 }
 
 .link-text() {
@@ -48,23 +54,36 @@ body {
     .transition(color @duration ease-in);
   }
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
+b,
+strong {
+  font-weight: @font-weight-bold;
+}
+
 // Menu header
 // --------------------------------------------------
 .menu-title() {
   font-family: @menu-title-family;
-  font-size: @menu-title-size;
+  font-size: @menu-title-size * @menu-title-mobile-percentage;
   font-weight: @menu-title-weight;
   line-height: @menu-title-line-height;
+  letter-spacing: @menu-title-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @menu-title-size;
+  }
 }
 
 .menu-subtitle() {
   font-family: @menu-subtitle-family;
-  font-size: @menu-subtitle-size;
+  font-size: @menu-subtitle-size * @menu-subtitle-mobile-percentage;
   font-weight: @menu-subtitle-weight;
   line-height: @menu-subtitle-line-height;
+  letter-spacing: @menu-subtitle-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @menu-subtitle-size;
+  }
 }
 
 .menu-body() {
@@ -79,11 +98,9 @@ body {
   font-size: @menu-instruction-size;
   font-weight: @menu-instruction-weight;
   line-height: @menu-instruction-line-height;
-  font-style: italic;
+  font-style: @menu-instruction-font-style;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Menu item
 // --------------------------------------------------
 .menu-item-title() {
@@ -91,6 +108,7 @@ body {
   font-size: @menu-item-title-size;
   font-weight: @menu-item-title-weight;
   line-height: @menu-item-title-line-height;
+  letter-spacing: @menu-item-title-letter-spacing;
 }
 
 .menu-item-body() {
@@ -99,23 +117,31 @@ body {
   font-weight: @menu-item-body-weight;
   line-height: @menu-item-body-line-height;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Page header
 // --------------------------------------------------
 .page-title() {
   font-family: @page-title-family;
-  font-size: @page-title-size;
+  font-size: @page-title-size * @page-title-mobile-percentage;
   font-weight: @page-title-weight;
   line-height: @page-title-line-height;
+  letter-spacing: @page-title-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @page-title-size;
+  }
 }
 
 .page-subtitle() {
   font-family: @page-subtitle-family;
-  font-size: @page-subtitle-size;
+  font-size: @page-subtitle-size * @page-subtitle-mobile-percentage;
   font-weight: @page-subtitle-weight;
   line-height: @page-subtitle-line-height;
+  letter-spacing: @page-subtitle-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @page-subtitle-size;
+  }
 }
 
 .page-body() {
@@ -130,43 +156,59 @@ body {
   font-size: @page-instruction-size;
   font-weight: @page-instruction-weight;
   line-height: @page-instruction-line-height;
-  font-style: italic;
+  font-style: @page-instruction-font-style;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Page
 // --------------------------------------------------
 .article-title() {
   font-family: @article-title-family;
-  font-size: @article-title-size;
+  font-size: @article-title-size * @article-title-mobile-percentage;
   font-weight: @article-title-weight;
   line-height: @article-title-line-height;
+  letter-spacing: @article-title-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @article-title-size;
+  }
 }
 
 .block-title() {
   font-family: @block-title-family;
-  font-size: @block-title-size;
+  font-size: @block-title-size * @block-title-mobile-percentage;
   font-weight: @block-title-weight;
   line-height: @block-title-line-height;
+  letter-spacing: @block-title-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @block-title-size;
+  }
 }
 
 .component-title() {
   font-family: @component-title-family;
-  font-size: @component-title-size;
+  font-size: @component-title-size * @component-title-mobile-percentage;
   font-weight: @component-title-weight;
   line-height: @component-title-line-height;
+  letter-spacing: @component-title-letter-spacing;
+
+  @media (min-width: @device-width-medium) {
+    font-size: @component-title-size;
+  }
 }
 
 .notify-title() {
   font-family: @notify-title-family;
-  font-size: @notify-title-size;
+  font-size: @notify-title-size * @notify-title-mobile-percentage;
   font-weight: @notify-title-weight;
   line-height: @notify-title-line-height;
-}
-// --------------------------------------------------
+  letter-spacing: @notify-title-letter-spacing;
 
-// --------------------------------------------------
+  @media (min-width: @device-width-medium) {
+    font-size: @notify-title-size;
+  }
+}
+
 // Drawer
 // --------------------------------------------------
 .drawer-item-title() {
@@ -174,6 +216,7 @@ body {
   font-size: @drawer-item-title-size;
   font-weight: @drawer-item-title-weight;
   line-height: @drawer-item-title-line-height;
+  letter-spacing: @drawer-item-title-letter-spacing;
 }
 
 .drawer-item-body() {
@@ -189,9 +232,7 @@ body {
   font-weight: @resources-filter-btn-weight;
   line-height: @resources-filter-btn-line-height;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Components
 // --------------------------------------------------
 .item-title() {
@@ -199,6 +240,7 @@ body {
   font-size: @item-title-size;
   font-weight: @item-title-weight;
   line-height: @item-title-line-height;
+  letter-spacing: @item-title-letter-spacing;
 }
 
 .pull-quote-title() {
@@ -206,7 +248,8 @@ body {
   font-family: @pull-quote-title-family;
   font-weight: @pull-quote-title-weight;
   line-height: @pull-quote-title-line-height;
-  font-style: italic;
+  font-style: @pull-quote-font-style;
+  letter-spacing: @pull-quote-letter-spacing;
   color: inherit;
 }
 
@@ -216,9 +259,7 @@ body {
   font-weight: @pull-quote-body-weight;
   line-height: @pull-quote-body-line-height;
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Left over - to sort
 // --------------------------------------------------
 // p {
@@ -244,4 +285,3 @@ body {
 // 	border: 0;
 // 	padding: 0;
 // }
-// --------------------------------------------------

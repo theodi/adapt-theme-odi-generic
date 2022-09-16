@@ -1,8 +1,8 @@
 {
     "name": "adapt-theme-odi-generic",
     "repository": "git@github.com:theodi/adapt-theme-odi-generic.git",
-    "framework": ">=5.2",
-    "version": "0.9.22",
+    "version": "7.0.1",
+    "framework": ">=5.20.1",
     "homepage": "https://github.com/theodi/adapt-theme-odi-generic/",
     "issues": "https://github.com/theodi/adapt-theme-odi-generic/issues",
     "displayName": "ODI Generic",

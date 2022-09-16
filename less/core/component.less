@@ -1,8 +1,18 @@
 .component {
+  &__container {
+    flex-direction: unset;
+    margin-left: -@component-padding-hoz;
+    margin-right: -@component-padding-hoz;
+  }
+
+  &__inner {
+    padding: @component-padding-ver @component-padding-hoz;
+  }
+
   &__title {
     margin-bottom: @component-title-margin;
     .component-title;
-    color: inherit;
+    color: @heading-color;
   }
 
   &__body {
@@ -17,11 +27,5 @@
   &__body a,
   &__instruction a {
     .link-text;
-  }
-
-  @media (max-width: @device-width-medium) {
-    &.is-left {
-      padding-bottom: @block-padding-ver;
-    }
   }
 }

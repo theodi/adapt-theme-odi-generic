@@ -1,7 +1,6 @@
-// --------------------------------------------------
 // Colour definitions
 // --------------------------------------------------
-@blue: #36CDE8;
+@blue: #117F93;
 @blueDark: #263944;
 @grey: #9096A0;
 @greyDark: #4D4D4D;
@@ -12,9 +11,12 @@
 // --------------------------------------------------
 @transparent-light: transparent;
 @transparent-dark: transparent;
-// --------------------------------------------------
 
-// --------------------------------------------------
+// Note: If customising a theme for the Authoring Tool please update the
+// corresponding default value for that variable in the properties.schema file.
+// This is to stop any amended variables below being overwritten by
+// the Theme Picker in the Authoring Tool.
+
 // Body, link, and heading colour
 // --------------------------------------------------
 @font-color: @greyDark;
@@ -28,9 +30,7 @@
 
 @heading-color: @blue;
 @heading-color-inverted: @white;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Items - components
 // --------------------------------------------------
 @item-color: @blue;
@@ -41,16 +41,12 @@
 
 @item-color-selected: darken(@item-color, 20%);
 @item-color-inverted-selected: @item-color-inverted;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Visited - presentation components
 // --------------------------------------------------
 @visited: #727272;
 @visited-inverted: @white;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Buttons
 // --------------------------------------------------
 @btn-color: @greyDark;
@@ -58,16 +54,20 @@
 
 @btn-color-hover: darken(@btn-color, 10%);
 @btn-color-inverted-hover: @btn-color-inverted;
-// --------------------------------------------------
 
+// Button icon
 // --------------------------------------------------
+@btn-icon-color: @nav-icon;
+@btn-icon-color-inverted: @nav-icon-inverted;
+
+@btn-icon-color-hover: @nav-icon-hover;
+@btn-icon-color-inverted-hover: @nav-icon-inverted-hover;
+
 // Disabled - question components
 // --------------------------------------------------
 @disabled: #DDDDDD;
 @disabled-inverted: @black;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Validation states - question marking
 // --------------------------------------------------
 @validation-success: #065f28;
@@ -75,17 +75,13 @@
 
 @validation-error: #ff0000;
 @validation-error-inverted: @white;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Progress
 // --------------------------------------------------
 @progress: @grey;
 @progress-inverted: @white;
 @progress-border: @grey;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Menu
 // --------------------------------------------------
 @menu-item: @white;
@@ -101,11 +97,8 @@
 
 @menu-item-btn-color-hover: @btn-color-hover;
 @menu-item-btn-color-inverted-hover: @btn-color-inverted-hover;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Navigation
-// --------------------------------------------------
 // --------------------------------------------------
 @nav: @white;
 @nav-inverted: @grey;
@@ -124,7 +117,6 @@
 @nav-progress-inverted-hover: @nav-progress-inverted;
 @nav-progress-border-hover: @nav-progress-border;
 
-// --------------------------------------------------
 // Notify
 // --------------------------------------------------
 @notify: @blue;
@@ -145,9 +137,7 @@
 
 @notify-icon-hover: darken(@notify-icon, 10%);
 @notify-icon-inverted-hover: @notify-icon-inverted;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Drawer
 // --------------------------------------------------
 @drawer: @blueDark;
@@ -171,6 +161,7 @@
 
 @drawer-item-selected: darken(@drawer-item, 20%);
 @drawer-item-inverted-selected: @drawer-item-inverted;
+@drawer-item-selected-underline: @drawer-item-inverted;
 
 @drawer-progress: @drawer-item-inverted;
 @drawer-progress-inverted: @drawer-item;
@@ -179,18 +170,13 @@
 @drawer-progress-hover: @drawer-item-inverted-hover;
 @drawer-progress-inverted-hover: @drawer-item-hover;
 @drawer-progress-border-hover: @drawer-progress-border;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Background
 // --------------------------------------------------
 @background: @black;
 @background-inverted: @white;
-// --------------------------------------------------
 
-// --------------------------------------------------
 // Shadow
 // --------------------------------------------------
 @shadow: @black;
 @shadow-inverted: @white;
-// --------------------------------------------------
