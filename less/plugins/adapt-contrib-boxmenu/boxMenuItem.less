@@ -13,7 +13,7 @@
   }
 
   &__title {
-    margin-bottom: @menu-item-title-margin;;
+    margin-bottom: @menu-item-title-margin;
     .menu-item-title;
   }
 
@@ -44,6 +44,12 @@
       color: @menu-item-btn-color-inverted-hover;
       .transition(background-color @duration ease-in, color @duration ease-in;);
     }
+  }
+
+  &__button.is-locked,
+  &__button.is-disabled {
+    background-color: @disabled;
+    color: @disabled-inverted;
   }
 
   &.has-img-zoom &__image-container {

@@ -407,28 +407,27 @@ a {
 			background-color: darken(@color, 20%);
 		}
 	}
-	.mcq {
-		&__item {
-			label {
-				background-color: @color;
-				border-radius: 0px;
-				.no-touch & {
-					&:hover {
-						background-color: darken(@color, 20%);
-					}
-					&.visited:hover {
-						background-color: darken(@color, 20%);
-					}
+	.mcq-item {
+		label {
+			background-color: @color;
+			border-radius: 0px;
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color, 20%);
 				}
 			}
-			.is-disabled {
-				color: @color-inverted;
-				background-color: @color;
-			}
-			.is-selected {
-				background-color: darken(@color, 20%);	
-			}
 		}
+		.is-disabled {
+			color: @color-inverted;
+			background-color: @color;
+		}
+		.is-selected {
+			background-color: darken(@color, 20%);	
+		}
+		
 	}
 	.matching {
 		.dropdown__btn {
@@ -524,26 +523,24 @@ a {
 			background-color: darken(@color-inverted, 20%);
 		}	
 	}
-	.mcq {
-		&__item {
-			label {
-				background-color: @color-inverted;
-				color: darken(@color,10%);
-				.no-touch & {
-					&:hover {
-						background-color: darken(@color-inverted, 20%);
-					}
-					&.visited:hover {
-						background-color: darken(@color-inverted, 20%);
-					}
+	.mcq-item {
+		label {
+			background-color: @color-inverted;
+			color: darken(@color,10%);
+			.no-touch & {
+				&:hover {
+					background-color: darken(@color-inverted, 20%);
+				}
+				&.visited:hover {
+					background-color: darken(@color-inverted, 20%);
 				}
 			}
-			.is-disabled {
-				background-color: darken(@color-inverted, 20%);
-			}
-			.is-selected {
-				background-color: @color-inverted;
-			}
+		}
+		.is-disabled {
+			background-color: darken(@color-inverted, 20%);
+		}
+		.is-selected {
+			background-color: @color-inverted;
 		}
 	}
 	.matching {

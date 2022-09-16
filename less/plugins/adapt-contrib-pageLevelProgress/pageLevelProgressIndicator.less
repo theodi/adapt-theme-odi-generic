@@ -1,35 +1,28 @@
+// Allows the progress lozenge to appear alongside the title
+// --------------------------------------------------
 .js-heading + .pagelevelprogress__indicator {
   display: inline-block;
   vertical-align: middle;
 }
 
-.menu,
-.menu-item,
-.page,
-.article,
-.block,
-.component {
-  &__title-inner {
-    display: inline;
-    vertical-align: middle;
+// Global progress lozenge
+// --------------------------------------------------
+.pagelevelprogress {
+  &__indicator {
+    border-color: @progress-border;
+  }
+
+  &__indicator-inner {
+    background-color: @progress-inverted;
+  }
+
+  &__indicator-bar {
+    background-color: @progress;
+    .transition(width @progress-duration linear);
   }
 }
 
-.pagelevelprogress__indicator {
-  border-color: @progress-border;
-}
-
-.pagelevelprogress__indicator-inner {
-  background-color: @progress-inverted;
-}
-
-.pagelevelprogress__indicator-bar {
-  background-color: @progress;
-  .transition(width @progress-duration linear);
-}
-
-// --------------------------------------------------
-// Menu
+// Menu overrides
 // --------------------------------------------------
 .menu-item__progress {
   .pagelevelprogress__indicator {
@@ -44,10 +37,8 @@
     background-color: @menu-item-progress;
   }
 }
-// --------------------------------------------------
 
-// --------------------------------------------------
-// Nav
+// Nav overrides
 // --------------------------------------------------
 .pagelevelprogress__nav-btn {
   .pagelevelprogress__indicator {
@@ -79,12 +70,10 @@
     }
   }
 }
-// --------------------------------------------------
 
+// Drawer overrides
 // --------------------------------------------------
-// Drawer
-// --------------------------------------------------
-.pagelevelprogress__item-btn {
+.pagelevelprogress__item-btn:not(.is-disabled) {
   .pagelevelprogress__indicator {
     border-color: @drawer-progress-border;
   }
@@ -114,4 +103,17 @@
     }
   }
 }
-// --------------------------------------------------
+
+.pagelevelprogress__item-btn.is-disabled {
+  .pagelevelprogress__indicator {
+    border-color: @disabled-inverted;
+  }
+
+  .pagelevelprogress__indicator-inner {
+    background-color: @disabled;
+  }
+
+  .pagelevelprogress__indicator-bar {
+    background-color: @disabled-inverted;
+  }
+}
