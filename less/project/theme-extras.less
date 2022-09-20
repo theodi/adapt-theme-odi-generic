@@ -101,8 +101,16 @@ b, strong {
 .footer {
 	background-color: @footer;
 	color:@footer-inverted;
+	@heading-color: @footer-inverted;
+	@heading-color-inverted: @greyDark;
 	.graphic__attribution {
 		display: none;
+	}
+	.block__title {
+		color: @footer-inverted;
+	}
+	.component__title {
+		color: @footer-inverted;
 	}
 	.graphic {
 		&__inner {
@@ -352,6 +360,9 @@ a {
 	.block__title {
 		color: @font-color;
 	}
+	.component__title {
+		color: @font-color;
+	}
 	.narrative {
 		&__content {
 			background-color: @color;
@@ -453,6 +464,8 @@ a {
 .setInverted(@color,@color-inverted) {
 	background-color: @color;
 	color: @color-inverted;
+	@heading-color: @color-inverted;
+	@heading-color-inverted: @greyDark;
 	h1,h2,h3,h4,h5,a, a:hover, a:visited {
 		color: @color-inverted;
 	}
@@ -542,6 +555,10 @@ a {
 		.is-selected {
 			background-color: @color-inverted;
 		}
+	}
+	.gmcq__item-option {
+		background-color: @color-inverted;
+		color: @color;
 	}
 	.matching {
 		.dropdown__btn {
