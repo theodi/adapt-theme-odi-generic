@@ -394,10 +394,10 @@ a {
 		}
 	}
 	.accordion {
-		&__item {
+		&-item {
 			border: 3px solid @color;
 		}
-		&__item-btn {
+		&-item__btn {
 			border-radius: 0px;
 			background-color: @color;
 			.no-touch & {
@@ -409,12 +409,12 @@ a {
 				}
 			}
 		}
-		&__item-content {
+		&-item__content {
 			border-radius: 0px;
 			background-color: @color-inverted;
 			color: @font-color;
 		}
-		&__item-btn:hover {
+		&-item__btn:hover {
 			background-color: darken(@color, 20%);
 		}
 	}
@@ -511,10 +511,10 @@ a {
 		}
 	}
 	.accordion {
-		&__item {
+		&-item {
 			border: 3px solid @color-inverted;
 		}
-		&__item-btn {
+		&-item__btn {
 			border-radius: 0px;
 			background-color: @color-inverted;
 			color: darken(@color,10%);
@@ -527,12 +527,12 @@ a {
 				}
 			}
 		}
-		&__item-content {
+		&-item__content {
 			border-radius: 0px;
 			background-color: @color;
 			color: @color-inverted;
 		}
-		&__item-btn:hover {
+		&-item__btn:hover {
 			background-color: darken(@color-inverted, 20%);
 		}	
 	}
@@ -623,7 +623,6 @@ a {
 				text-align: center;
 			}
 			.graphic__inner img {
-				content: url("@{theme-logo}");
 				padding-top: @theme-logo-top-padding;
     			min-width: @theme-logo-width;
     			max-width: @theme-logo-width;

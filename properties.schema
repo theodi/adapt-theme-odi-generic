@@ -108,14 +108,6 @@
         "required": false,
         "title": "Theme logo",
         "properties": {
-         "theme-logo": {
-            "title": "First block logo",
-            "help": "This is the first block logo, it gets applied to any graphic component with class intro-logo",
-            "type": "string",
-            "inputType": "Asset:image",
-            "default": "",
-            "validators": []
-         },
          "theme-logo-top-padding": {
             "title": "Padding above the theme logo",
             "help": "Often used to shunt the theme logo down to provide padding in respect to a component title",
